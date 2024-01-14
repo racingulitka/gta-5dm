@@ -1,0 +1,60 @@
+.wrapper {
+  max-width: 1712px;
+  height: 74px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 72px;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  .logo {
+    width: 130px;
+  }
+  .secondBlock {
+    width: 669px;
+    .brightText {
+      color: #fff;
+      line-height: normal;
+    }
+    .text {
+      margin-top: 9px;
+      color: #828282;
+      line-height: normal;
+    }
+  }
+  .linkBlock {
+    height: 100%;
+    .title {
+        color: #fff;
+        font-weight: 600;
+      }
+      .links{
+        margin-top:18px;
+        display:flex;
+        flex-flow:column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        row-gap: 5px;
+        .link {
+            color: rgba(255, 255, 255, 0.55);
+          }
+      }
+  }
+  .paySystems{
+    width:259px;
+    height:70px;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 13px;
+    column-gap:12px;
+    .payLogo{
+        height:25px;
+    }
+  }
+}
