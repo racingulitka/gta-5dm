@@ -1,12 +1,66 @@
 .wrapper {
-  width: 100%;
+  background: #0e0e10;
+  overflow: hidden;
+  width: 1920px;
   height: 2307px;
   position: relative;
   margin: 0 auto;
-  display:flex;
+  display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: flex-start;
+  .baseballImage {
+    position: absolute;
+    width: 453px;
+    height: 435px;
+    top: 139px;
+    left: 0px;
+  }
+  .topRightCrossImage {
+    position: absolute;
+    width: 267px;
+    aspect-ratio: 1/1;
+    top: 0px;
+    right: 0px;
+  }
+  .bottomLeftCrossImage{
+    position: absolute;
+    width: 346px;
+    bottom: 0px;
+    left: 196px;
+  }
+  .smallCrossImageFirst {
+    position: absolute;
+    width: 88px;
+    aspect-ratio: 1/1;
+    top: 962px;
+    left: 108px;
+  }
+  .smallCrossImageSecond {
+    position: absolute;
+    width: 88px;
+    aspect-ratio: 1/1;
+    top: 1524px;
+    right: 94px;
+  }
+  .gunImage {
+    position: absolute;
+    width: 404px;
+    top: 659px;
+    right: 51px;
+  }
+  .ak1Image {
+    position: absolute;
+    width: 641px;
+    top: 1018px;
+    left: 0px;
+  }
+  .ak2Image {
+    position: absolute;
+    width: 878px;
+    top: 1732px;
+    right: 0px;
+  }
   .mainTitle {
     margin: 99px auto 80px;
     color: #eaeaea;
@@ -18,7 +72,7 @@
     line-height: normal;
   }
   .flexContainer {
-    max-width: 1387px;
+    max-width: 1394px;
     display: flex;
     flex-flow: row nowrap;
     column-gap: 51px;
@@ -28,9 +82,13 @@
       max-height: 477px;
       overflow: hidden;
       border-radius: 15px;
+      .image {
+        width: 679px;
+        height: 477px;
+      }
     }
     .infoBlock {
-      max-width: 657px;
+      max-width: 664px;
       .title {
         color: #e4a520;
         font-family: Gilroy;
@@ -48,7 +106,7 @@
         line-height: 39.2px;
       }
       .text {
-        margin-top:68px;
+        margin-top: 68px;
         color: rgba(255, 255, 255, 0.55);
         font-family: Gilroy;
         font-size: 20px;
@@ -60,5 +118,5 @@
   }
   .flexContainerReverse {
     flex-direction: row-reverse;
-}
+  }
 }

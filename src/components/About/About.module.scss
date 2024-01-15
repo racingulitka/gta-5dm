@@ -1,0 +1,29 @@
+.wrapper {
+  width: 1920px;
+  height: 1080px;
+  background: #0e0e10;
+  margin: 0 auto;
+  .title {
+    margin: 94px 0 0 90px;
+    color: #eaeaea;
+    font-family: Gilroy;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .description {
+    width:1103px;
+    height:auto;
+    margin: 53px 0 0 90px;
+    color: rgba(255, 255, 255, 0.55);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 172%; /* 30.96px */
+    & p{
+        margin-bottom:26px;
+    }
+  }
+}

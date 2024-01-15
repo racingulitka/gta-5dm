@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Footer from '../components/common/Footer/Footer'
 import Advantages from '@/components/Advantages/Advantages'
+import About from '@/components/About/About'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -16,10 +17,11 @@ export default function Home() {
         <link rel='stylesheet' href='index.css' />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-      <Advantages />
+        <About />
+        <Advantages />
       </main>
       <footer className={styles.footer}>
-      <Footer />
+        <Footer />
       </footer>
     </>
   )
