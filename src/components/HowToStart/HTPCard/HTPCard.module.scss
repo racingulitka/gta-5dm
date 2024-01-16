@@ -1,0 +1,55 @@
+.wrapper {
+  width: 393px;
+  height: 449px;
+  border-radius: 15px;
+  background: url(./assets/background2.png), url(./assets/background1.png);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  transition:0.3s;
+  &:hover{
+    transition:0.3s;
+    transform:translate(0, -37px);
+    background: linear-gradient(rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.015)), url(./assets/background2.png), url(./assets/background1.png);
+    cursor:pointer;
+  }
+  .image {
+    border-radius: 15px;
+    width: 335px;
+    height: 153px;
+    margin: 29px 0 18px 0;
+  }
+  .flexContainer {
+    width: 327px;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 13px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .step {
+      color: rgba(255, 255, 255, 0.55);
+      font-family: Gilroy;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .title {
+      color: #e4a520;
+      font-family: Gilroy;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .description {
+      color: #fff;
+      font-family: Gilroy;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 171%; /* 23.94px */
+    }
+  }
+}

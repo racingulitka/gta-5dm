@@ -1,25 +1,65 @@
+@mixin baseFont(){
+    font-family: Gilroy;
+    font-style: normal;
+    line-height: normal;
+}
+
 .wrapper {
   width: 1920px;
   height: 1080px;
   background: #0e0e10;
   margin: 0 auto;
+  position:relative;
+  .logo{
+    position:absolute;
+    top:505px;
+    left:1367px;
+    width:382px;
+    height:70px;
+    z-index:2;
+  }
+  .baseballImage{
+    position:absolute;
+    top:37px;
+    left:738px;
+    width:164px;
+  }
+  .akImage{
+    position:absolute;
+    bottom:14px;
+    left:227px;
+  }
+  .gunImage{
+    position:absolute;
+    top:415px;
+    left:1589px;
+    width:251px;
+    height:200px;
+  }
+  .crossImage1{
+    position:absolute;
+    bottom:132px;
+    left:90px;
+  }
+  .crossImage2{
+    position:absolute;
+    bottom:193px;
+    right:124px;
+  }
   .title {
     margin: 94px 0 0 90px;
     color: #eaeaea;
-    font-family: Gilroy;
+    @include baseFont();
     font-size: 50px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
   }
   .description {
     width:1103px;
     height:auto;
     margin: 53px 0 0 90px;
     color: rgba(255, 255, 255, 0.55);
-    font-family: Gilroy;
+    @include baseFont();
     font-size: 18px;
-    font-style: normal;
     font-weight: 500;
     line-height: 172%; /* 30.96px */
     & p{

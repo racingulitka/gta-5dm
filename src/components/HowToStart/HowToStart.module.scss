@@ -1,0 +1,84 @@
+.wrapper {
+  width: 1920px;
+  height: 941px;
+  margin: 0 auto;
+  background: #0e0e10;
+  position: relative;
+  .logo{
+    width:317px;
+    position:absolute;
+    top:127px;
+    right:333px;
+  }
+  .header {
+    margin: 84px 0 24px 332px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 15px;
+    height: 62px;
+    .title {
+      color: #eaeaea;
+      text-align: center;
+      font-family: Gilroy;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .pseudoButton {
+      width: 261px;
+      height: 41px;
+      border-radius: 8px;
+      background: #e4a520;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #64480c;
+      font-family: Gilroy;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 154%; /* 30.8px */
+      margin-top: 12px;
+    }
+  }
+  .description {
+    margin-left: 332px;
+    max-width: 748px;
+    height:auto;
+    color: rgba(255, 255, 255, 0.55);
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+  }
+  .cardContainer {
+    width: 393px;
+    height: 487px;
+    position: absolute;
+    top: 332px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    .number {
+      color: rgba(255, 255, 255, 0.55);
+      font-family: Gilroy;
+      font-size: 360px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      mix-blend-mode: overlay;
+      position: absolute;
+      top: -136px;
+      z-index: 1;
+    }
+    .HTPCard {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
