@@ -5,6 +5,7 @@ import Footer from '../components/common/Footer/Footer'
 import Advantages from '@/components/Advantages/Advantages'
 import About from '@/components/About/About'
 import HowToStart from '@/components/HowToStart/HowToStart'
+import SocialMedia from '@/components/SocialMedia/SocialMedia'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <About />
         <Advantages />
         <HowToStart />
+        <SocialMedia />
       </main>
       <footer className={styles.footer}>
         <Footer />
