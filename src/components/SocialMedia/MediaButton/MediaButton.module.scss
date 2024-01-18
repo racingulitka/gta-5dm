@@ -1,3 +1,9 @@
+@mixin text(){
+    font-family: Gilroy;
+    font-style: normal;
+    line-height: normal;
+}
+
 .wrapper {
   width: 390px;
   height: 115px;
@@ -8,12 +14,16 @@
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  padding: 27px 0 0 35px;
+  padding: 0 0 0 35px;
+  &:hover{
+    cursor:pointer;
+  }
   .flexContainer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
+    column-gap: 21px;
     .iconContainer {
       display: flex;
       justify-content: center;
@@ -22,17 +32,43 @@
         width: 43px;
         height: 43px;
         border-radius: 50%;
-        border: 6px solid #7289da;
-        box-shadow: 0px 0px 47.033px 0px rgba(114, 137, 218, 0.55);
-        display:flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         .icon {
           width: 46px;
           aspect-ratio: 1/1;
-          transform:translate(0, -2px);
+          transform: translate(0, -2px);
         }
       }
+    }
+    .textBlock {
+      height: 48px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: flex-start;
+      .name {
+        @include text();
+        font-size: 25px;
+        font-weight: 800;
+      }
+      .nameBack {
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .followers {
+        @include text();
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        span{
+            color: rgba(255, 255, 255, 0.55); 
+        }
+      }
+
     }
   }
 }

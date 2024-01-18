@@ -8,34 +8,116 @@
       rgba(37, 37, 41, 0) 100%
     ),
     #0e0e10;
-  .tiktokBackground {
+  .tiktokBackgroundBlock {
+    width: 308px;
+    height: 308px;
     position: absolute;
     top: 34px;
     left: 247px;
-    width: 308px;
-    height: 308px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .tiktokBackgroundCover {
+      position: absolute;
+      top:62%;
+      left:41%;
+      transform:translate(-50%, -50%);
+      height: 450px;
+      aspect-ratio: 1/1;
+      background: url(./assets/tiktokBackgroundCover.png);
+      background-size: cover;
+      z-index:1;
+    }
+    .tiktokBackground {
+      width: 308px;
+      height: 308px;
+      position:relative;
+      z-index:2;
+    }
   }
-  .youtubeBackground {
-    position: absolute;
+
+  .youtubeBackgroundBlock{
+    width:320px;
+    aspect-ratio: 1/1;
+    position:absolute;
     top: 32px;
     left: 1543px;
-    width: 320px;
-    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .youtubeBackgroundCover{
+      position: absolute;
+      top:53%;
+      left:46%;
+      transform:translate(-50%, -50%);
+      height: 450px;
+      aspect-ratio: 1/1;
+      background: url(./assets/youtubeBackgroundCover.png);
+      background-size: cover;
+      z-index:1;
+    }
+    .youtubeBackground {
+      width: 320px;
+      height: 320px;
+      position:relative;
+      z-index:2;
+    }
   }
-  .telegramBackground {
-    position: absolute;
+  .telegramBackgroundBlock{
+    width:134px;
+    aspect-ratio: 1/1;
+    position:absolute;
     top: 802px;
     left: 198px;
-    width: 134px;
-    height: 134px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .telegramBackgroundCover{
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      height: 450px;
+      aspect-ratio: 1/1;
+      background: url(./assets/telegramBackgroundCover.png);
+      background-size: cover;
+      z-index:1;
+    }
+    .telegramBackground {
+      width: 134px;
+      height: 134px;
+      position:relative;
+      z-index:2;
+    }
   }
-  .vkBackground {
-    position: absolute;
+  .vkBackgroundBlock{
+    width:356px;
+    aspect-ratio: 1/1;
+    position:absolute;
     top: 726px;
     left: 1132px;
-    width: 356px;
-    height: 356px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .vkBackgroundCover{
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-59%, -58%);
+      height: 450px;
+      aspect-ratio: 1/1;
+      background: url(./assets/vkBackgroundCover.png);
+      background-size: cover;
+      z-index:1;
+    }
+    .vkBackground {
+      width: 356px;
+      height: 356px;
+      position:relative;
+      z-index:2;
+    }
   }
+
   .content {
     margin: 319px auto 8px;
     .title {
@@ -57,13 +139,13 @@
       text-align: center;
     }
   }
-  .flexContainer{
-    width:1260px;
-    display:flex;
-    flex-flow:row wrap;
+  .flexContainer {
+    width: 1260px;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap:45px;
-    margin:58px auto 0;
+    gap: 45px;
+    margin: 58px auto 0;
   }
 }
