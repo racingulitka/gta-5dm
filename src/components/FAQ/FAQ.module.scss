@@ -8,6 +8,51 @@
     ),
     #0e0e10;
   position: relative;
+  .smallCross1{
+    width:46px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    top:148px;
+    left:200px;
+  }
+  .smallCross2{
+    width:46px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    top:440px;
+    right:338px;
+  }
+  .smallCross3{
+    width:46px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    top:924px;
+    left:127px;
+  }
+  .mediumCross{
+    width:80px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    mix-blend-mode: overlay;
+    top:114px;
+    right:139px;
+  }
+  .largeCross1{
+    width:150px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    mix-blend-mode: overlay;
+    top:580px;
+    left:246px;
+  }
+  .largeCross2{
+    width:150px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    mix-blend-mode: overlay;
+    top:830px;
+    right:69px;
+  }
   & main {
     width: 980px;
     height: auto;
@@ -38,8 +83,6 @@
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: flex-start;
-      overflow-y: scroll;
-      scrollbar-width: none;
       margin: 39px auto 0;
       & nav {
         width: 255px;
@@ -47,11 +90,14 @@
       }
       .infoBlock {
         width: 684px;
-        height: auto;
+        height: 815px;
         display: flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: center;
+        overflow-y:scroll;
+        scrollbar-width: none;
+
         & h3 {
           color: #fff;
           font-family: Gilroy;
@@ -61,6 +107,10 @@
           line-height: normal;
           margin:0 0 41px 0;
           width:100%;
+        }
+        .scroller{
+        width:100%;
+        height:calc(815px - 71px);
         }
       }
     }

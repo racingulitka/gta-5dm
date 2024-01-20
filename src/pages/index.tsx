@@ -7,6 +7,7 @@ import About from '@/components/About/About'
 import HowToStart from '@/components/HowToStart/HowToStart'
 import SocialMedia from '@/components/SocialMedia/SocialMedia'
 import FAQ from '@/components/FAQ/FAQ'
+import Header from '@/components/common/Header/Header'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -19,6 +20,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel='stylesheet' href='index.css' />
       </Head>
+      <header className={styles.header}>
+        <Header />
+      </header>
       <main className={`${styles.main} ${inter.className}`}>
         <About />
         <Advantages />
