@@ -1,0 +1,60 @@
+@mixin defaultFont() {
+  color: #fff;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.wrapper {
+  width: 208px;
+  height: 51px;
+  border-radius: 5px;
+  background: #18181c;
+  margin: 0 18px 0 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  &:hover {
+    cursor: pointer;
+  }
+  .yellowLine {
+    width: 5px;
+    height: 100%;
+    background: #e4a520;
+  }
+  .title {
+    margin: 0 0 0 12px;
+    @include defaultFont();
+  }
+  .serverInfo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    column-gap: 3px;
+    align-items: center;
+    margin: 0 0 0 48px;
+    & span{
+        @include defaultFont();
+    }
+    .indicatorBorder{
+        width:10px;
+        aspect-ratio: 1/1;
+        border-radius:50%;
+        background: rgba(44, 171, 118, 0.35);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        transform:translate(-2px, 0);
+        .indicatorCenter{
+            width:6px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background: #2CAB76;
+        }
+    }
+  }
+}
