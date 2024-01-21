@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-  width: 1920px;
+  width: min(1920px, 100vw);
   height: 1080px;
   background: #0e0e10;
   margin: 0 auto;
@@ -13,7 +13,7 @@
   .logo{
     position:absolute;
     top:505px;
-    left:1367px;
+    right:171px;
     width:382px;
     height:70px;
     z-index:2;
@@ -32,7 +32,8 @@
   .gunImage{
     position:absolute;
     top:415px;
-    left:1589px;
+    //left:1589px;
+    right:calc(1920px - 1589px - 251px);
     width:251px;
     height:200px;
   }
@@ -54,14 +55,16 @@
     font-weight: 700;
   }
   .description {
-    width:1103px;
+    position:relative;
+    z-index:2;
+    width:min(1103px, 90vw);
     height:auto;
-    margin: 53px 0 0 90px;
+    margin: 53px min(90px, 5vw) 0 min(90px, 5vw);
     color: rgba(255, 255, 255, 0.55);
     @include baseFont();
     font-size: 18px;
     font-weight: 500;
-    line-height: 172%; /* 30.96px */
+    line-height: 172%;
     & p{
         margin-bottom:26px;
     }

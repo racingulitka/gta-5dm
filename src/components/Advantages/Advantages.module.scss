@@ -1,7 +1,7 @@
 .wrapper {
   background: #0e0e10;
   overflow: hidden;
-  width: 1920px;
+  width: min(1920px, 100vw);
   height: 2307px;
   position: relative;
   margin: 0 auto;
@@ -15,6 +15,7 @@
     height: 435px;
     top: 139px;
     left: 0px;
+    z-index:3;
   }
   .topRightCrossImage {
     position: absolute;
@@ -70,15 +71,18 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    position:relative;
+    z-index:2;
   }
   .flexContainer {
-    max-width: 1394px;
+    width: min(1394px, 90vw);
     display: flex;
     flex-flow: row nowrap;
     column-gap: 51px;
     margin-bottom: 103px;
     .imageBlock {
-      max-width: 679px;
+      //max-width: 679px;
+      flex:1 1 679px;
       max-height: 477px;
       overflow: hidden;
       border-radius: 15px;
@@ -89,6 +93,9 @@
     }
     .infoBlock {
       max-width: 664px;
+      flex: 1 1 664px;
+      position:relative;
+      z-index:2;
       .title {
         color: #e4a520;
         font-family: Gilroy;

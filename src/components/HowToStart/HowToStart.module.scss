@@ -1,23 +1,25 @@
 .wrapper {
-  width: 1920px;
+  width: min(1920px, 100vw);
   height: 941px;
   margin: 0 auto;
   background: #0e0e10;
   position: relative;
-  .logo{
-    width:317px;
-    position:absolute;
-    top:127px;
-    right:333px;
+  .logo {
+    width: 317px;
+    position: absolute;
+    top: min(127px, 8vw);
+    right: min(333px, 5vw);
   }
   .header {
-    margin: 84px 0 24px 332px;
+    margin: 84px 0 24px min(332px, 18vw);
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
     column-gap: 15px;
     height: 62px;
+    position: relative;
+    z-index: 2px;
     .title {
       color: #eaeaea;
       text-align: center;
@@ -40,14 +42,14 @@
       font-size: 20px;
       font-style: normal;
       font-weight: 500;
-      line-height: 154%; /* 30.8px */
+      line-height: 154%;
       margin-top: 12px;
     }
   }
   .description {
-    margin-left: 332px;
+    margin-left: min(332px, 18vw);
     max-width: 748px;
-    height:auto;
+    height: auto;
     color: rgba(255, 255, 255, 0.55);
     font-family: Gilroy;
     font-size: 16px;
@@ -55,30 +57,33 @@
     font-weight: 400;
     line-height: 170%;
   }
-  .cardContainer {
-    width: 393px;
-    height: 487px;
-    position: absolute;
-    top: 332px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    .number {
-      color: rgba(255, 255, 255, 0.55);
-      font-family: Gilroy;
-      font-size: 360px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      mix-blend-mode: overlay;
+  .cardWrapper {
+    //position:relative;
+    .cardContainer {
+      width: 393px;
+      height: 487px;
       position: absolute;
-      top: -136px;
-      z-index: 1;
-    }
-    .HTPCard {
-      position: relative;
-      z-index: 2;
+      top: 332px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      .number {
+        color: rgba(255, 255, 255, 0.55);
+        font-family: Gilroy;
+        font-size: 360px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        mix-blend-mode: overlay;
+        position: absolute;
+        top: -136px;
+        z-index: 1;
+      }
+      .HTPCard {
+        position: relative;
+        z-index: 2;
+      }
     }
   }
 }

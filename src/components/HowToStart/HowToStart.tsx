@@ -14,26 +14,28 @@ const HowToStart = () => {
                 <div className={styles.pseudoButton}>Выполните всего 3 шага</div>
             </div>
             <div className={styles.description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </div>
-            {
-                cardArr.map(item => {
-                    return (
-                        <div key={item.id} className={styles.cardContainer} style={{ left: `${item.cardleft}px` }}>
-                            <div className={styles.number} style={{ left: `${item.numberLeft}px` }}>{item.id}</div>
-                            <div className={styles.HTPCard}>
-                                <HTPCard
-                                    image={item.cardImage}
-                                    step={item.id}
-                                    title={item.cardTitle}
-                                    description={item.description}
-                                />
+            <div className={styles.cardWrapper}>
+                {
+                    cardArr.map(item => {
+                        return (
+                            <div key={item.id} className={styles.cardContainer} style={{ left: `${item.cardleft}px` }}>
+                                <div className={styles.number} style={{ left: `${item.numberLeft}px` }}>{item.id}</div>
+                                <div className={styles.HTPCard}>
+                                    <HTPCard
+                                        image={item.cardImage}
+                                        step={item.id}
+                                        title={item.cardTitle}
+                                        description={item.description}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    )
-                })
-            }
+                        )
+                    })
+                }
+            </div>
 
         </div>
     )

@@ -8,9 +8,29 @@ import HowToStart from '@/components/HowToStart/HowToStart'
 import SocialMedia from '@/components/SocialMedia/SocialMedia'
 import FAQ from '@/components/FAQ/FAQ'
 import Header from '@/components/common/Header/Header'
+import HamburgerMenu from '@/components/common/HamburgerMenu/HamburgerMenu'
+import {useState, useEffect} from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [mobileView, setMobileView] = useState(false);
+
+  useEffect(() => {
+    const updateMobileView = () => {
+      setMobileView(window.innerWidth < 1000);
+    };
+
+    // Вызовем updateMobileView при монтировании компонента
+    updateMobileView();
+
+    // Добавим слушатель события resize, чтобы обновлять mobileView при изменении размеров окна
+    window.addEventListener('resize', updateMobileView);
+
+    // Удалим слушатель при размонтировании компонента
+    return () => {
+      window.removeEventListener('resize', updateMobileView);
+    };
+  }, []);
   return (
     <>
       <Head>
@@ -21,7 +41,9 @@ export default function Home() {
         <link rel='stylesheet' href='index.css' />
       </Head>
       <header className={styles.header}>
-        <Header />
+        {
+          mobileView ? <HamburgerMenu /> : <Header />
+        }
       </header>
       <main className={`${styles.main} ${inter.className}`}>
         <About />
