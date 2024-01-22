@@ -1,0 +1,121 @@
+.wrapper {
+  background: #0e0e10;
+  overflow: hidden;
+  width: min(1920px, 100vw);
+  height: 2307px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  // .baseballImage {
+  //   position: absolute;
+  //   width: 453px;
+  //   height: 435px;
+  //   top: 139px;
+  //   left: 0px;
+  //   z-index:3;
+  // }
+  // .topRightCrossImage {
+  //   position: absolute;
+  //   width: 267px;
+  //   aspect-ratio: 1/1;
+  //   top: 0px;
+  //   right: 0px;
+  // }
+  // .bottomLeftCrossImage{
+  //   position: absolute;
+  //   width: 346px;
+  //   bottom: 0px;
+  //   left: 196px;
+  // }
+  // .smallCrossImageFirst {
+  //   position: absolute;
+  //   width: 88px;
+  //   aspect-ratio: 1/1;
+  //   top: 962px;
+  //   left: 108px;
+  // }
+  // .smallCrossImageSecond {
+  //   position: absolute;
+  //   width: 88px;
+  //   aspect-ratio: 1/1;
+  //   top: 1524px;
+  //   right: 94px;
+  // }
+  // .gunImage {
+  //   position: absolute;
+  //   width: 404px;
+  //   top: 659px;
+  //   right: 51px;
+  // }
+  .ak1Image {
+    position: absolute;
+    width: 641px;
+    top: 1018px;
+    left: 0px;
+  }
+  // .ak2Image {
+  //   position: absolute;
+  //   width: 878px;
+  //   top: 1732px;
+  //   right: 0px;
+  // }
+  .mainTitle {
+    margin: 99px auto 80px;
+    color: #eaeaea;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position:relative;
+    z-index:2;
+  }
+  .flexContainer {
+    width: min(1394px, 90vw);
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 14px;
+    margin-bottom: 35px;
+    .imageBlock {
+      height: auto;
+      overflow: hidden;
+      border-radius: 15px;
+      .image {
+        width: max(90vw, 356px);
+        height:auto;
+      }
+    }
+    .infoBlock {
+      width: max(356px, 90vw);
+      position:relative;
+      z-index:2;
+      .title {
+        color: #e4a520;
+        font-family: Gilroy;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .description {
+        color: #fff;
+        font-family: Gilroy;
+        font-size: 16px;
+        font-style: normal;
+        text-align: center;
+        font-weight: 400;
+        line-height: 39.2px;
+      }
+    }
+  }
+  .flexContainerReverse {
+    flex-direction: row-reverse;
+  }
+}

@@ -25,6 +25,7 @@ const Footer = () => {
                 Professional Gaming Solutions Limited (13565439) UK, London, Palliser House, Palliser Road, W149EB
                 </div>
             </div>
+            <div style={{display:'flex', flexFlow:'row nowrap', columnGap:'72px'}}>
             <div className={styles.linkBlock}>
                 <div className={styles.title}>
                     Для пользователей
@@ -50,6 +51,7 @@ const Footer = () => {
                         Техническая поддержка
                     </a>
                 </div>
+            </div>
             </div>
             <div className={styles.paySystems}>
                 {

@@ -10,6 +10,7 @@ import FAQ from '@/components/FAQ/FAQ'
 import Header from '@/components/common/Header/Header'
 import HamburgerMenu from '@/components/common/HamburgerMenu/HamburgerMenu'
 import {useState, useEffect} from 'react'
+import AdvantagesMobile from '@/components/mobile/AdvantagesMobile/AdvantagesMobile'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -47,7 +48,10 @@ export default function Home() {
       </header>
       <main className={`${styles.main} ${inter.className}`}>
         <About />
-        <Advantages />
+        {
+          mobileView ? <AdvantagesMobile /> : <Advantages />
+        }
+        
         <HowToStart />
         <SocialMedia />
         <FAQ />

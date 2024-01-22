@@ -3,7 +3,6 @@ import defaultHTPCardImage from './assets/defaultHTPCardImage.png'
 export const cardArr = [
     {
         id:1,
-        cardleft:332,
         numberLeft:-95,
         cardImage:defaultHTPCardImage,
         cardTitle:'Установить GTA 5',
@@ -12,7 +11,6 @@ export const cardArr = [
     },
     {
         id:2,
-        cardleft:763,
         numberLeft:-86,
         cardImage:defaultHTPCardImage,
         cardTitle:'Скачать и установить мультиплеер RAGE MP',
@@ -20,7 +18,6 @@ export const cardArr = [
     },
     {
         id:3,
-        cardleft:1194,
         numberLeft:-107,
         cardImage:defaultHTPCardImage,
         cardTitle:'Подключиться к нашему серверу',

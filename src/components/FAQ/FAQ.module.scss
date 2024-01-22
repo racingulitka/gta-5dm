@@ -1,5 +1,5 @@
 .wrapper {
-  width: 1920px;
+  width: min(1920px, 100vw);
   height: 1080px;
   background: radial-gradient(
       75.83% 75.83% at 50% 50%,

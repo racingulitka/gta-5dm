@@ -6,7 +6,7 @@
 
 .wrapper {
   width: min(1920px, 100vw);
-  height: 1080px;
+  min-height:1080px;
   background: #0e0e10;
   margin: 0 auto;
   position:relative;
@@ -68,5 +68,21 @@
     & p{
         margin-bottom:26px;
     }
+  }
+}
+
+@media (max-width:1675px){
+  .logo{
+    display:none;
+  }
+}
+@media (max-width:1387px){
+  .gunImage{
+    display:none;
+  }
+}
+@media (max-width:938px){
+  .akImage{
+    display:none;
   }
 }

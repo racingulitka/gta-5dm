@@ -21,7 +21,7 @@ const HowToStart = () => {
                 {
                     cardArr.map(item => {
                         return (
-                            <div key={item.id} className={styles.cardContainer} style={{ left: `${item.cardleft}px` }}>
+                            <div key={item.id} className={styles.cardContainer}>
                                 <div className={styles.number} style={{ left: `${item.numberLeft}px` }}>{item.id}</div>
                                 <div className={styles.HTPCard}>
                                     <HTPCard

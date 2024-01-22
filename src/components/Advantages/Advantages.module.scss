@@ -127,3 +127,18 @@
     flex-direction: row-reverse;
   }
 }
+@media (max-width:1260px){
+  .gunImage{
+    display:none;
+  }
+}
+@media (max-width:1445px){
+  .ak1Image{
+    display:none;
+  }
+}
+@media (max-width:1153px){
+  .ak2Image{
+    display:none;
+  }
+}

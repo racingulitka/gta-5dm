@@ -1,6 +1,6 @@
 .wrapper {
   width: min(1920px, 100vw);
-  height: 1080px;
+  min-height: 1080px;
   position: relative;
   background: radial-gradient(
       75.83% 75.83% at 50% 50%,
@@ -13,7 +13,7 @@
     height: 308px;
     position: absolute;
     top: 34px;
-    left: 247px;
+    left: min(247px, 13vw);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,8 +31,7 @@
     .tiktokBackground {
       width: 308px;
       height: 308px;
-      position:relative;
-      z-index:2;
+      //z-index:2;
     }
   }
 
@@ -41,7 +40,7 @@
     aspect-ratio: 1/1;
     position:absolute;
     top: 32px;
-    left: 1543px;
+    right: min(57px, 3vw);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +66,7 @@
     width:134px;
     aspect-ratio: 1/1;
     position:absolute;
-    top: 802px;
+    bottom: 144px;
     left: 198px;
     display: flex;
     justify-content: center;
@@ -94,8 +93,8 @@
     width:356px;
     aspect-ratio: 1/1;
     position:absolute;
-    top: 726px;
-    left: 1132px;
+    bottom: -2px;
+    right: min(432px, 23vw);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,12 +139,18 @@
     }
   }
   .flexContainer {
-    width: 1260px;
+    width: min(1260px, 90vw);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 45px;
-    margin: 58px auto 0;
+    margin: 58px auto 326px;
+  }
+}
+@media (max-width:1430px){
+  .tiktokBackground{
+    width:100px;
+    height:100px;
   }
 }

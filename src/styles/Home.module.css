@@ -16,8 +16,8 @@
   height: auto;
 }
 .footer{
-  width:1920px;
-  height:190px;
+  max-width:1920px;
+  min-height:190px;
   margin:0 auto;
   display:flex;
   flex-flow:row nowrap;

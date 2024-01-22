@@ -1,6 +1,6 @@
 .wrapper {
   width: min(1920px, 100vw);
-  height: 941px;
+  min-height: 941px;
   margin: 0 auto;
   background: #0e0e10;
   position: relative;
@@ -58,12 +58,17 @@
     line-height: 170%;
   }
   .cardWrapper {
-    //position:relative;
+    display:flex;
+    flex-flow: row wrap;
+    column-gap: 38px;
+    justify-content: center;
+    align-items: center;
+    width:min(1255px, 98vw);
+    margin:87px auto 0px;
     .cardContainer {
       width: 393px;
       height: 487px;
-      position: absolute;
-      top: 332px;
+      position: relative;
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-end;
@@ -77,7 +82,7 @@
         line-height: normal;
         mix-blend-mode: overlay;
         position: absolute;
-        top: -136px;
+        top: -94px;
         z-index: 1;
       }
       .HTPCard {
@@ -85,5 +90,15 @@
         z-index: 2;
       }
     }
+  }
+}
+@media (max-width:1293px){
+  .logo{
+    display:none;
+  }
+}
+@media (max-width:1280px){
+  .cardContainer:last-child{
+    margin-top:20px;
   }
 }
