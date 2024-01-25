@@ -9,12 +9,14 @@ import SocialMedia from '@/components/SocialMedia/SocialMedia'
 import FAQ from '@/components/FAQ/FAQ'
 import Header from '@/components/common/Header/Header'
 import HamburgerMenu from '@/components/common/HamburgerMenu/HamburgerMenu'
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import AdvantagesMobile from '@/components/mobile/AdvantagesMobile/AdvantagesMobile'
+import PaymentModal from '@/components/common/PaymentModal/PaymentModal'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [mobileView, setMobileView] = useState(false);
+  const [showPaymentModal, setShowPaymentModal] = useState<boolean>(false)
 
   useEffect(() => {
     const updateMobileView = () => {
@@ -31,7 +33,12 @@ export default function Home() {
     return () => {
       window.removeEventListener('resize', updateMobileView);
     };
-  }, []);
+  }, [])
+
+  const onRequestClose = () => {
+    setShowPaymentModal(false)
+  }
+
   return (
     <>
       <Head>
@@ -43,7 +50,7 @@ export default function Home() {
       </Head>
       <header className={styles.header}>
         {
-          mobileView ? <HamburgerMenu /> : <Header />
+          mobileView ? <HamburgerMenu getDonat={setShowPaymentModal} /> : <Header getDonat={setShowPaymentModal} />
         }
       </header>
       <main className={`${styles.main} ${inter.className}`}>
@@ -51,10 +58,16 @@ export default function Home() {
         {
           mobileView ? <AdvantagesMobile /> : <Advantages />
         }
-        
+
         <HowToStart />
         <SocialMedia />
         <FAQ />
+        {
+          showPaymentModal &&
+          <PaymentModal
+            onRequestClose={onRequestClose}
+          />
+        }
       </main>
       <footer className={styles.footer}>
         <Footer />

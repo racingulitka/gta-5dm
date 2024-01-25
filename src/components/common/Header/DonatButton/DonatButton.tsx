@@ -4,7 +4,11 @@ import Image from 'next/image'
 import donatIcon from './assets/donatIcon.svg'
 import cn from 'classnames'
 
-const DonatButton = () => {
+const DonatButton = ({
+    getDonat
+}:{
+    getDonat:React.Dispatch<React.SetStateAction<boolean>>
+}) => {
 
     const [isMouseDown, setMouseDown] = useState<boolean>(false)
     const [isMouseUnder, setMouseUnder] = useState<boolean>(false)
@@ -12,7 +16,7 @@ const DonatButton = () => {
     return(
         <div
             className={cn(styles.wrapper, isMouseUnder && styles.wrapperHover, isMouseDown && styles.wrapperClicked)}
-            onClick={() => console.log('donat')}
+            onClick={() => getDonat(true)}
             onMouseDown={() => setMouseDown(true)}
             onMouseUp={() => setMouseDown(false)}
             onMouseEnter={() => setMouseUnder(true)}

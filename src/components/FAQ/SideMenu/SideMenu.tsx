@@ -12,7 +12,6 @@ const SideMenu = ({
     activeCategory:number,
     setActiveCategory:React.Dispatch<React.SetStateAction<number>>,
 }) => {
-    console.log(array)
     return (
         <div className={styles.wrapper}>
             {

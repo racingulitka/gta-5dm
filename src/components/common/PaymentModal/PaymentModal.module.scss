@@ -1,0 +1,93 @@
+.wrapper {
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index:99;
+  .dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 505px;
+    height: 815px;
+    border-radius: 10px;
+    background: #16161a;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: none;
+    outline: none;
+    z-index: 100;
+
+    .header {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      border-radius: 9px 9px 0px 0px;
+      background: #1e1e23;
+      width: 505px;
+      height: 88px;
+      gap: 42px;
+      .fillData {
+        flex: 1 0 auto;
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+      }
+      .splitter {
+        width: 1px;
+        height: 56px;
+        background: rgba(255, 255, 255, 0.15);
+      }
+      .chosePaymentMethod {
+        flex: 1.4 0 auto;
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+       }
+      .numberSquare {
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.15);
+        color: rgba(255, 255, 255, 0.25);
+        text-align: center;
+        font-family: Gilroy;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 151.139%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+      }
+      .numberSquareActive {
+        background: #e4a520;
+        color: #161619;
+      }
+      .title {
+        color: rgba(255, 255, 255, 0.25);
+        font-family: Gilroy;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 151.139%; /* 24.182px */
+      }
+      .titleActive {
+        color: #e4a520;
+      }
+    }
+  }
+}

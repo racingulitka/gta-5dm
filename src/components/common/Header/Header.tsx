@@ -7,7 +7,11 @@ import cn from 'classnames'
 import DonatButton from './DonatButton/DonatButton'
 import ServerBlock from './ServerBlock/ServerBlock'
 
-const Header = () => {
+const Header = ({
+    getDonat
+}:{
+    getDonat:React.Dispatch<React.SetStateAction<boolean>>
+}) => {
 
     const [activeItem, setActiveItem] = useState<MenuItems>(MenuItems.advantages)
 
@@ -31,7 +35,7 @@ const Header = () => {
                     }
                 </div>
                 <ServerBlock />
-                <DonatButton />
+                <DonatButton getDonat={getDonat}/>
             </div>
         </div>
     )

@@ -6,7 +6,11 @@ import cn from 'classnames'
 import { MenuItems, menuItems } from '../Header/Header.config'
 import DonatButton from '../Header/DonatButton/DonatButton'
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({
+    getDonat
+}:{
+    getDonat:React.Dispatch<React.SetStateAction<boolean>>
+}) => {
 
     const [isActive, setActive] = useState<boolean>(false)
     const [activeMenuItem, setActiveMenuItem] = useState<MenuItems>(MenuItems.advantages)
@@ -35,7 +39,7 @@ const HamburgerMenu = () => {
                         )
                     })
                 }
-                <DonatButton />
+                <DonatButton getDonat={getDonat} />
             </div>
         </div>
     )

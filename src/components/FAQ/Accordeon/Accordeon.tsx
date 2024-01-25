@@ -9,7 +9,6 @@ const Accordeon = ({
     question:string,
     answer:string,
 }) => {
-    console.log(answer)
     const [isActive, setActive] = useState<boolean>(false)
     return(
         <div className={cn(styles.wrapper, isActive && styles.wrapperActive)}>

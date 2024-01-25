@@ -1,0 +1,49 @@
+.wrapper {
+  margin: 37px auto 0;
+  width: 390px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .title {
+    color: #fff;
+    font-family: Gilroy;
+    font-size: 19.077px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 151.139%;
+  }
+  .nextScreenButton {
+    width: 100%;
+    height: 42px;
+    border-radius: 5px;
+    background: #202026;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    &:hover{
+      cursor:pointer;
+    }
+    .cardIcon {
+      width: 23px;
+      height: auto;
+      margin: 0 10px;
+    }
+    .text {
+      color: rgba(255, 255, 255, 0.35);
+      font-family: Gilroy;
+      font-size: 15.262px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 151.139%;
+      user-select: none;
+    }
+    .textActive {
+      color: #64480c;
+    }
+  }
+  .nextScreenButtonActive {
+    background: #e4a520;
+  }
+}

@@ -31,7 +31,7 @@
     .tiktokBackground {
       width: 308px;
       height: 308px;
-      //z-index:2;
+      z-index:2;
     }
   }
 
@@ -148,9 +148,26 @@
     margin: 58px auto 326px;
   }
 }
-@media (max-width:1430px){
-  .tiktokBackground{
-    width:100px;
-    height:100px;
+@media (max-width:1400px){
+  .wrapper .tiktokBackgroundBlock .tiktokBackground{
+    width:150px;
+    height:150px;
+  }
+  .wrapper .youtubeBackgroundBlock .youtubeBackground{
+    width:160px;
+    height:160px;
+  }
+  .wrapper .vkBackgroundBlock .vkBackground{
+    width:170px;
+    height:170px;
+  }
+  .wrapper .flexContainer{
+    row-gap: 35px;
+  }
+}
+@media (max-width:1398px){
+  .flexContainer{
+    row-gap:35px;
+    column-gap: 45px;
   }
 }

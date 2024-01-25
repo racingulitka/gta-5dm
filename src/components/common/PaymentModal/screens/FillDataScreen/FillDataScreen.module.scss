@@ -1,0 +1,243 @@
+@mixin mainFlexLayout() {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 379px;
+}
+
+@mixin inputBlockDefault() {
+  width: 100%;
+  position: relative;
+}
+
+@mixin inputDefault() {
+  width: 100%;
+  height: 42px;
+  border: none;
+  border-radius: 4.769px;
+  background: #0e0e10;
+  color: fff;
+  font-family: Gilroy;
+  font-size: 15.262px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 151.139%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 0 42px;
+  outline: none;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@mixin inputIcon() {
+  position: absolute;
+  width: 22px;
+  height: auto;
+  top: 50%;
+  left: 0;
+  transform: translate(10px, -50%);
+}
+
+@mixin checkBoxBlock() {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+@mixin checkBoxDescription() {
+  color: rgba(255, 255, 255, 0.35);
+  font-family: Gilroy;
+  font-size: 13.354px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 151.139%;
+}
+
+@mixin title() {
+  color: #fff;
+  font-family: Gilroy;
+  font-size: 19.077px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 151.139%;
+}
+
+.wrapper {
+  margin: 37px 0 0 54px;
+  width: 379px;
+  @include mainFlexLayout();
+  gap: 39px;
+  .paymentMethod {
+    @include mainFlexLayout();
+    gap: 14px;
+    .title {
+      @include title();
+    }
+    .loginWrapper {
+      @include inputBlockDefault();
+      .loginInput {
+        @include inputDefault();
+      }
+      .loginIcon {
+        @include inputIcon();
+      }
+    }
+    .paymentValueWrapper {
+      @include inputBlockDefault();
+      .paymentValueInput {
+        @include inputDefault();
+      }
+      .paymentValueIcon {
+        @include inputIcon();
+      }
+      .paymentConvertContainer {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(0, -50%);
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 4px;
+        .multiplier {
+          width: 23px;
+          height: 23px;
+          border-radius: 2.862px;
+          background: #e4a520;
+          box-shadow: 0px 0px 21.367px 0px rgba(228, 165, 32, 0.25);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #64480c;
+          text-align: center;
+          font-family: Gilroy;
+          font-size: 13.354px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 151.139%;
+        }
+        .noMultiplier {
+          display: none;
+        }
+        .convertedValue {
+          color: #fff;
+          text-align: center;
+          font-family: Gilroy;
+          font-size: 13.354px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 151.139%;
+        }
+        .coins {
+          color: rgba(255, 255, 255, 0.2);
+          text-align: center;
+          font-family: Gilroy;
+          font-size: 13.354px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 151.139%;
+        }
+      }
+    }
+    .ofertaBlock {
+      @include checkBoxBlock();
+      .ofertaDescription {
+        @include checkBoxDescription();
+      }
+    }
+    .otherBlock {
+      @include checkBoxBlock();
+      .otherDescription {
+        @include checkBoxDescription();
+        flex: 0 100 auto;
+      }
+    }
+    .nextScreenButton {
+      width: 100%;
+      height: 42px;
+      border-radius: 5px;
+      background: #202026;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      &:hover{
+        cursor:pointer;
+      }
+      .cardIcon {
+        width: 23px;
+        height: auto;
+        margin: 0 10px;
+      }
+      .text {
+        color: rgba(255, 255, 255, 0.35);
+        font-family: Gilroy;
+        font-size: 15.262px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 151.139%;
+        user-select: none;
+      }
+      .textActive {
+        color: #64480c;
+      }
+    }
+    .nextScreenButtonActive {
+      background: #e4a520;
+    }
+  }
+  .info {
+    @include mainFlexLayout();
+    gap: 14px;
+    .title {
+      @include title();
+    }
+    .exchangeInfo {
+      color: #fff;
+      font-family: Gilroy;
+      font-size: 13.354px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 151.139%;
+      & span {
+        color: #daaf2d;
+      }
+    }
+    .textBlock {
+      color: rgba(255, 255, 255, 0.35);
+      font-family: Gilroy;
+      font-size: 13.354px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 151.139%;
+    }
+    .ofertaLink {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      .ofertaIcon {
+        width: 23px;
+        height: auto;
+      }
+      .text {
+        color: rgba(255, 255, 255, 0.25);
+        font-family: Gilroy;
+        font-size: 13.354px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 151.139%;
+      }
+    }
+  }
+}
