@@ -14,6 +14,18 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
+"@emotion/is-prop-valid@^0.8.2":
+  version "0.8.8"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
+  integrity sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==
+  dependencies:
+    "@emotion/memoize" "0.7.4"
+
+"@emotion/memoize@0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.4.tgz#19bf0f5af19149111c40d98bb0cf82119f5d9eeb"
+  integrity sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==
+
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz#a23514e8fb9af1269d5f7788aa556798d61c6b59"
@@ -415,6 +427,11 @@ balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
+
+bezier-easing@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/bezier-easing/-/bezier-easing-2.1.0.tgz#c04dfe8b926d6ecaca1813d69ff179b7c2025d86"
+  integrity sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==
 
 binary-extensions@^2.0.0:
   version "2.2.0"
@@ -995,6 +1012,15 @@ for-each@^0.3.3:
   integrity sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==
   dependencies:
     is-callable "^1.1.3"
+
+framer-motion@^11.0.3:
+  version "11.0.3"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.0.3.tgz#b2a87e7ae166a9e27da33da9cfb50a0db5f94fa7"
+  integrity sha512-6x2poQpIWBdbZwLd73w6cKZ1I9IEPIU94C6/Swp1Zt3LJ+sB5bPe1E2wC6EH5hSISXNkMJ4afH7AdwS7MrtkWw==
+  dependencies:
+    tslib "^2.4.0"
+  optionalDependencies:
+    "@emotion/is-prop-valid" "^0.8.2"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -1696,6 +1722,13 @@ p-locate@^5.0.0:
   dependencies:
     p-limit "^3.0.2"
 
+parallax-controller@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/parallax-controller/-/parallax-controller-1.7.1.tgz#86d94ddb97007788f6d7fb2272e5b523e59c3e7f"
+  integrity sha512-facVMEBnUynzMN7hCSqyNpF6uyCpVIl4XAUyTR9D8q2JlhgyPY6bZtj/OkFk3+Cpka1TnYCppQb8BzDWHtSaZg==
+  dependencies:
+    bezier-easing "^2.1.0"
+
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
@@ -1779,6 +1812,11 @@ react-dom@^18:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-intersection-observer@^9.5.3:
+  version "9.5.3"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-9.5.3.tgz#f47a31ed3a0359cbbfdb91a53d7470ac2ab7b3c7"
+  integrity sha512-NJzagSdUPS5rPhaLsHXYeJbsvdpbJwL6yCHtMk91hc0ufQ2BnXis+0QQ9NBh6n9n+Q3OyjR6OQLShYbaNBkThQ==
+
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -1798,6 +1836,13 @@ react-modal@^3.16.1:
     prop-types "^15.7.2"
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
+
+react-scroll-parallax@^3.4.5:
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/react-scroll-parallax/-/react-scroll-parallax-3.4.5.tgz#397fd8870734f693d5ffe4dc5d3d6f7af9985d67"
+  integrity sha512-4NLZQ8cZEUyxoA95DfrXWneOOUSFrFmpM0dZNzMErmuJ0LzY+CCw8Xw0hqB6xxHWxNknfs46AozyIPSWkZeucA==
+  dependencies:
+    parallax-controller "^1.7.1"
 
 react@^18:
   version "18.2.0"

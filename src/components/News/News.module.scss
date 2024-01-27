@@ -1,0 +1,247 @@
+@mixin layoutBlock() {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin infoBlock() {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin title() {
+  color: #eaeaea;
+  text-shadow: 0px 0px 63px rgba(255, 255, 255, 0.25);
+  font-family: Gilroy;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin text() {
+  margin-top: 18px 0 0 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 196%;
+}
+
+@mixin footer() {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+@mixin date() {
+  color: rgba(255, 255, 255, 0.55);
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 196%;
+}
+
+@mixin image() {
+  border-radius: 15px;
+}
+
+.wrapper {
+  width: 1920px;
+  height: 1080px;
+  background: #1a1a1e;
+  position: relative;
+  .topLeftBlock {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 695px;
+    background: #0e0e10;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .logo {
+      position: absolute;
+      width: 120px;
+      height: auto;
+      top: 51px;
+      left: 79px;
+    }
+    .layoutBlock {
+      @include layoutBlock();
+      margin: 120px 0 29px 79px;
+      gap: 66px;
+      .infoBlock {
+        width: 523px;
+        @include infoBlock();
+        .title {
+          @include title();
+        }
+        .text {
+          @include text();
+        }
+        .footer {
+          @include footer();
+          margin-top: 39px;
+          .date {
+            @include date();
+          }
+        }
+      }
+      .image {
+        @include image();
+      }
+    }
+  }
+
+  .bottomBlock {
+    width: 1191px;
+    height: 385px;
+    background: #e4a520;
+    position:relative;
+    .layoutBlock {
+      @include layoutBlock();
+      .infoBlock {
+        margin: 38px 0 0px 38px;
+        width: 362px;
+        @include infoBlock();
+        .title {
+          @include title();
+        }
+        .text {
+          @include text();
+        }
+        .footer {
+          @include footer();
+          margin-top: 26px;
+          .date {
+            @include date();
+          }
+        }
+      }
+    }
+    .bottomRightBlock {
+      width: 729px;
+      height: 385px;
+      background: #1a1a1e;
+      position:absolute;
+      z-index:2;
+      bottom:0px;
+      right:0px;
+      .layoutBlock {
+        @include layoutBlock();
+        .infoBlock {
+          margin: 38px 0 0px 38px;
+          width: 362px;
+          @include infoBlock();
+          .title {
+            @include title();
+          }
+          .text {
+            @include text();
+          }
+          .footer {
+            @include footer();
+            margin-top: 26px;
+            .date {
+              @include date();
+            }
+          }
+        }
+      }
+      .image {
+        @include image();
+        margin:38px 0 0 21px;
+      }
+    }
+  }
+
+  .rightBlock {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1080px;
+    width: 729px;
+    z-index: 2;
+    background: #e4a520;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    .layoutBlock {
+      @include layoutBlock();
+      margin: 0px 38px 28px 38px;
+      gap: 31px;
+      .infoBlock {
+        @include infoBlock();
+        width: 362px;
+        .title {
+          @include title();
+          color: #1a1a1e;
+        }
+        .text {
+          @include text();
+          color: rgba(26, 26, 30, 0.55);
+        }
+        .footer {
+          @include footer();
+          margin-top: 31px;
+          .date {
+            @include date();
+            color: rgba(26, 26, 30, 0.55);
+          }
+        }
+      }
+      .image {
+        @include image();
+      }
+    }
+    .topRightBlock {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 575px;
+      background: #1a1a1e;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .layoutBlock {
+        @include layoutBlock();
+        flex-flow:column nowrap;
+        margin: 38px 0px 0px 38px;
+        gap: 31px;
+        .infoBlock {
+          @include infoBlock();
+          width: 362px;
+          .title {
+            @include title();
+          }
+          .text {
+            @include text();
+          }
+          .image {
+            @include image();
+            margin-top:13px;
+          }
+          .footer {
+            @include footer();
+            margin-top: 42px;
+            .date {
+              @include date();
+            }
+          }
+        }
+      }
+    }
+  }
+}

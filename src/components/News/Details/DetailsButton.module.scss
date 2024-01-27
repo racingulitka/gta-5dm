@@ -1,0 +1,13 @@
+.wrapper {
+  width: 175px;
+  height: 51px;
+  border-radius: 7px;
+  border: 1px solid #e4a520;
+  background: rgba(228, 165, 32, 0.5);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  &:hover{
+    cursor:pointer;
+  }
+}

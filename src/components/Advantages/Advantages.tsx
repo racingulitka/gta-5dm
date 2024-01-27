@@ -10,8 +10,12 @@ import smallCrossImage from './assets/smallCrossImage.png'
 import gunImage from './assets/gunImage.png'
 import ak1Image from './assets/ak1Image.png'
 import ak2Image from './assets/ak2Image.png'
+import { Parallax } from 'react-scroll-parallax'
+
 
 const Advantages = () => {
+
+
     return(
         <div className={styles.wrapper}>
             <Image src={baseballImage} alt='baseballImage' className={styles.baseballImage} />
@@ -26,11 +30,17 @@ const Advantages = () => {
             {
                 advantageArr.map(item => {
                     return(
-                        <div
+                        <Parallax
+                            speed={-10}
+                            translateY={[-30, 30]}
+                            scale={[0.9, 1]}
+                            translateX={item.id === 2 ? [0, -3] : [0, 3]}
                             key={item.id}
                             className={cn(styles.flexContainer, item.id === 2 && styles.flexContainerReverse)}
                         >
-                            <div className={styles.imageBlock}>
+                            <div
+                                className={styles.imageBlock}
+                            >
                                 <Image src={item.image} alt='image' className={styles.image} />
                             </div>
                             <div className={styles.infoBlock}>
@@ -38,7 +48,7 @@ const Advantages = () => {
                                 <div className={styles.description}>{item.description}</div>
                                 <div className={styles.text}>{item.text}</div>
                             </div> 
-                        </div>
+                        </Parallax>
                     )
                 })
             }
