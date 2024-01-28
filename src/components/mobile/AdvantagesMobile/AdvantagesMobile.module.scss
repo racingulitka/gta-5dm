@@ -2,68 +2,84 @@
   background: #0e0e10;
   overflow: hidden;
   width: min(1920px, 100vw);
-  height: 2307px;
+  height: fit-content;
   position: relative;
   margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: flex-start;
-  // .baseballImage {
-  //   position: absolute;
-  //   width: 453px;
-  //   height: 435px;
-  //   top: 139px;
-  //   left: 0px;
-  //   z-index:3;
-  // }
-  // .topRightCrossImage {
-  //   position: absolute;
-  //   width: 267px;
-  //   aspect-ratio: 1/1;
-  //   top: 0px;
-  //   right: 0px;
-  // }
-  // .bottomLeftCrossImage{
-  //   position: absolute;
-  //   width: 346px;
-  //   bottom: 0px;
-  //   left: 196px;
-  // }
-  // .smallCrossImageFirst {
-  //   position: absolute;
-  //   width: 88px;
-  //   aspect-ratio: 1/1;
-  //   top: 962px;
-  //   left: 108px;
-  // }
-  // .smallCrossImageSecond {
-  //   position: absolute;
-  //   width: 88px;
-  //   aspect-ratio: 1/1;
-  //   top: 1524px;
-  //   right: 94px;
-  // }
-  // .gunImage {
-  //   position: absolute;
-  //   width: 404px;
-  //   top: 659px;
-  //   right: 51px;
-  // }
+  box-sizing: border-box;
+  padding-bottom: 99px;
+  .baseballImage {
+    position: absolute;
+    width: 238px;
+    height: auto;
+    top: 58.5%;
+    left: -96px;
+    transform:scale(0.8);
+    z-index:3;
+  }
+  .topRightCrossImage {
+    position: absolute;
+    width: 267px;
+    aspect-ratio: 1/1;
+    top: 0px;
+    right: 0px;
+    z-index:1;
+  }
+  .bottomLeftCrossImage{
+    position: absolute;
+    width: 346px;
+    bottom: 0px;
+    left: 196px;
+    z-index:1;
+  }
+  .smallCrossImageFirst {
+    position: absolute;
+    width: 88px;
+    aspect-ratio: 1/1;
+    top: 32.5%;
+    left: 10px;
+    transform:scale(0.8);
+    z-index:3;
+  }
+  .smallCrossImageSecond {
+    position: absolute;
+    width: 88px;
+    aspect-ratio: 1/1;
+    top: 52.5%;
+    right: 10px;
+    transform:scale(0.7);
+    z-index:3;
+  }
+  .gunImage {
+    position: absolute;
+    width: 404px;
+    height:auto;
+    top: 28.5%;
+    right: -134px;
+    transform:scale(0.5);
+    z-index:3;
+  }
   .ak1Image {
     position: absolute;
     width: 641px;
-    top: 1018px;
-    left: 0px;
+    top: -11%;
+    left: -279px;
+    transform:scale(0.35);
+    z-index:1;
   }
-  // .ak2Image {
-  //   position: absolute;
-  //   width: 878px;
-  //   top: 1732px;
-  //   right: 0px;
-  // }
+  .ak2Image {
+    position: absolute;
+    width: 878px;
+    top: 79%;
+    right: -335px;
+    transform:scale(0.35);
+    z-index:3;
+  }
   .mainTitle {
-    margin: 99px auto 80px;
+    margin: 41px auto 28px;
     color: #eaeaea;
     text-align: center;
     font-family: Gilroy;
@@ -81,7 +97,9 @@
     justify-content: center;
     align-items: center;
     row-gap: 14px;
-    margin-bottom: 35px;
+    position:relative;
+    z-index:2;
+    margin-bottom:35px;
     .imageBlock {
       height: auto;
       overflow: hidden;
@@ -103,6 +121,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        margin-bottom:9px;
       }
       .description {
         color: #fff;

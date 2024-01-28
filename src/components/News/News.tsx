@@ -9,10 +9,10 @@ import { useInView } from 'react-intersection-observer'
 
 const News = () => {
 
-    const step1Delay = 0
-    const step2Delay = 1
-    const step3Delay = 2
-    const step4Delay = 3
+    const step1Delay = 1
+    const step2Delay = 2
+    const step3Delay = 3
+    const step4Delay = 4
 
     const stepDuration = 0.5
 

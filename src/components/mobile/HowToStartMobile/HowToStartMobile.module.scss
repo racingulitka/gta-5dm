@@ -1,0 +1,69 @@
+.wrapper {
+  width: min(1920px, 100vw);
+  height: fit-content;
+  margin: 0 auto;
+  background: #0e0e10;
+  position: relative;
+  .header {
+    margin: 31px 0 15px 31px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+    position: relative;
+    z-index: 2px;
+    .title {
+      color: #eaeaea;
+      text-align: center;
+      font-family: Gilroy;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .pseudoButton {
+      width: 206px;
+      height: 35px;
+      border-radius: 8px;
+      background: #e4a520;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #64480c;
+      font-family: Gilroy;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 154%;
+    }
+  }
+  .description {
+    margin: 0 15px 0 15px;
+    height: auto;
+    color: rgba(255, 255, 255, 0.55);
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+  }
+  .logo {
+    display: block;
+    width: 187px;
+    height: auto;
+    margin: 32px auto 41px;
+  }
+  .cardWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 41px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 38px 37px;
+    .HTPCard {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

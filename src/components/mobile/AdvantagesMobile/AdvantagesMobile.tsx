@@ -14,14 +14,14 @@ import ak2Image from './assets/ak2Image.png'
 const AdvantagesMobile = () => {
     return(
         <div className={styles.wrapper}>
-            {/* <Image src={baseballImage} alt='baseballImage' className={styles.baseballImage} />
+            <Image src={baseballImage} alt='baseballImage' className={styles.baseballImage} />
             <Image src={topRightCrossImage} alt='topRightCrossImage' className={styles.topRightCrossImage} />
             <Image src={bottomLeftCrossImage} alt='bottomLeftCrossImage' className={styles.bottomLeftCrossImage} />
             <Image src={smallCrossImage} alt="smallCrossImage" className={styles.smallCrossImageFirst} />
             <Image src={smallCrossImage} alt="smallCrossImage" className={styles.smallCrossImageSecond} />
             <Image src={gunImage} alt="gunImage" className={styles.gunImage} />
             <Image src={ak1Image} alt="ak1Image" className={styles.ak1Image} />
-            <Image src={ak2Image} alt="ak2Image" className={styles.ak2Image} /> */}
+            <Image src={ak2Image} alt="ak2Image" className={styles.ak2Image} />
             <div className={styles.mainTitle}>Преимущества</div>
             {
                 advantageArr.map(item => {

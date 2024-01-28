@@ -6,6 +6,7 @@
 
 .wrapper {
   width: min(1920px, 100vw);
+  height:fit-content;
   min-height:1080px;
   background: #0e0e10;
   margin: 0 auto;
@@ -47,6 +48,12 @@
     bottom:193px;
     right:124px;
   }
+  .mobileBaseballImage{
+    display:none;
+  }
+  .ak2Image{
+    display:none;
+  }
   .title {
     margin: 94px 0 0 90px;
     color: #eaeaea;
@@ -84,5 +91,53 @@
 @media (max-width:938px){
   .akImage{
     display:none;
+  }
+}
+@media (max-width:767px){
+  .wrapper .title{
+    font-size: 30px;
+    margin:41px auto 30px;
+    text-align: center;
+    position:relative;
+    z-index:2;
+  }
+  .wrapper .description{
+    font-size: 16px;
+    margin: 0 50px 46px;
+    width:fit-content;
+    text-align: center;
+    position:relative;
+    z-index:2;
+  }
+  .wrapper .akImage{
+    display:block;
+    top:-5%;
+    left:-200px;
+    transform:rotate(30deg) scale(0.5);
+  }
+  .wrapper .gunImage{
+    display:block;
+    top:23%;
+    right:-89px;
+    transform:rotate(-5deg) scale(0.5);
+  }
+  .wrapper .crossImage1{
+    top:27%;
+    left:25px;
+  }
+  .wrapper .crossImage2{
+    display:none;
+  }
+  .wrapper .mobileBaseballImage{
+    display:block;
+    position:absolute;
+    top:51%;
+    left:0px;
+  }
+  .wrapper .ak2Image{
+    display:block;
+    position:absolute;
+    top:70%;
+    right:0px;
   }
 }

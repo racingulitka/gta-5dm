@@ -6,13 +6,13 @@
   justify-content: center;
   align-items: center;
   column-gap: 72px;
-  row-gap: 30px;
+  gap: 30px;
   font-family: Gilroy;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin:0 auto;
+  margin: 0 auto;
   .logo {
     width: 130px;
   }
@@ -28,35 +28,77 @@
       line-height: normal;
     }
   }
-  .linkBlock {
-    height: 100%;
-    .title {
+  .justBlock {
+    display:flex;
+    flex-flow:row nowrap;
+    column-gap:72px;
+    .linkBlock {
+      height: 100%;
+      .title {
         color: #fff;
         font-weight: 600;
       }
-      .links{
-        margin-top:18px;
-        display:flex;
-        flex-flow:column nowrap;
+      .links {
+        margin-top: 18px;
+        display: flex;
+        flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: flex-start;
         row-gap: 5px;
         .link {
-            color: rgba(255, 255, 255, 0.55);
-          }
+          color: rgba(255, 255, 255, 0.55);
+        }
       }
+    }
   }
-  .paySystems{
-    width:259px;
-    height:70px;
-    display:flex;
-    flex-flow:row wrap;
+  .paySystems {
+    width: 259px;
+    height: 70px;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
     row-gap: 13px;
-    column-gap:12px;
-    .payLogo{
-        height:25px;
+    column-gap: 12px;
+    .payLogo {
+      height: 25px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    box-sizing: border-box;
+    padding: 42px 24px 58px;
+    gap: 0;
+    flex-flow: column nowrap;
+    .secondBlock {
+      margin: 40px auto 0;
+      width: 100%;
+      .brightText {
+        width: calc(100% - 20px);
+        margin: 0 auto;
+        text-align: center;
+      }
+      .text {
+        width: 100%;
+      }
+    }
+    .justBlock{
+      flex-flow:column nowrap;
+      align-items: center;
+      .linkBlock{
+        margin:37px auto 0;
+        .title{
+          text-align: center;
+        }
+        .links{
+          align-items: center;
+        }
+      }
+    }
+    .paySystems{
+      margin:46px auto 0;
     }
   }
 }

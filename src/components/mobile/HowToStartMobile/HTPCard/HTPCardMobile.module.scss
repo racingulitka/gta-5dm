@@ -1,0 +1,57 @@
+.wrapper {
+  position:relative;
+  width: 314px;
+  height: 359px;
+  border-radius: 15px;
+  background: url(./assets/background2.png) center center, url(./assets/background1.png) center center;
+  background-size: contain contain;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  .image {
+    display:block;
+    border-radius: 15px;
+    width: 268px;
+    height: 122px;
+    margin: 23px auto 14px auto;
+  }
+  .flexContainer {
+    width: 262px;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .step {
+      color: rgba(255, 255, 255, 0.55);
+      font-family: Gilroy;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .title {
+      color: #e4a520;
+      font-family: Gilroy;
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .description {
+      color: #fff;
+      font-family: Gilroy;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 171%;
+    }
+  }
+  .buyButton{
+    position:absolute;
+    bottom:30px;
+    left:27px;
+  }
+}
