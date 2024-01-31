@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   width:100vw;
-  height:1080px;
+  height:auto;
   margin:0 auto;
 }
 .main {
@@ -52,4 +52,22 @@
       url('../pages/fonts/Gilroy-Bold.ttf') format('opentype');
   font-weight: 700;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../pages/fonts/Gilroy-ExtraBold.ttf');
+  src: local('Gilroy'),
+      url('../pages/fonts/Gilroy-ExtraBold.ttf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../pages/fonts/Gilroy-ExtraBoldItalic.ttf');
+  src: local('Gilroy'),
+      url('../pages/fonts/Gilroy-ExtraBoldItalic.ttf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
 }

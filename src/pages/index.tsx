@@ -22,6 +22,14 @@ export default function Home() {
   const [mobileView, setMobileView] = useState(false);
   const [showPaymentModal, setShowPaymentModal] = useState<boolean>(false)
 
+  const handleNavigation = (sectionId: string) => {
+    console.log('nav')
+    const sectionToGo = document.getElementById(sectionId)
+    if (sectionToGo) {
+      sectionToGo.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   useEffect(() => {
     const updateMobileView = () => {
       setMobileView(window.innerWidth < 767);
@@ -55,7 +63,14 @@ export default function Home() {
         </Head>
         <header className={styles.header}>
           {
-            mobileView ? <HamburgerMenu getDonat={setShowPaymentModal} /> : <Header getDonat={setShowPaymentModal} />
+            mobileView ?
+              <HamburgerMenu
+                getDonat={setShowPaymentModal}
+                handleNavigation={handleNavigation} />
+              : <Header
+                getDonat={setShowPaymentModal}
+                handleNavigation={handleNavigation}
+              />
           }
         </header>
         <main className={`${styles.main} ${inter.className}`}>

@@ -13,7 +13,7 @@ import ak2Image from './assets/ak2Image.png'
 
 const AdvantagesMobile = () => {
     return(
-        <div className={styles.wrapper}>
+        <div id='advantages' className={styles.wrapper}>
             <Image src={baseballImage} alt='baseballImage' className={styles.baseballImage} />
             <Image src={topRightCrossImage} alt='topRightCrossImage' className={styles.topRightCrossImage} />
             <Image src={bottomLeftCrossImage} alt='bottomLeftCrossImage' className={styles.bottomLeftCrossImage} />

@@ -11,7 +11,7 @@ import vkBackground from './assets/vkBackground.png'
 
 const SocialMedia = () => {
     return (
-        <div className={styles.wrapper}>
+        <div id='socialMedia' className={styles.wrapper}>
             <div className={styles.tiktokBackgroundBlock}>
                 <div className={styles.tiktokBackgroundCover}></div>
                 <Image src={tiktokBackground} alt='tiktokBackground' className={styles.tiktokBackground} />

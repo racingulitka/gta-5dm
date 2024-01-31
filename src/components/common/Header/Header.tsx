@@ -6,14 +6,23 @@ import { MenuItems, menuItems } from './Header.config'
 import cn from 'classnames'
 import DonatButton from './DonatButton/DonatButton'
 import ServerBlock from './ServerBlock/ServerBlock'
+import Link from 'next/link'
 
 const Header = ({
-    getDonat
-}:{
-    getDonat:React.Dispatch<React.SetStateAction<boolean>>
+    getDonat,
+    handleNavigation
+}: {
+    getDonat: React.Dispatch<React.SetStateAction<boolean>>
+    handleNavigation: (sectionId: string) => void
 }) => {
 
-    const [activeItem, setActiveItem] = useState<MenuItems>(MenuItems.advantages)
+    const [activeItem, setActiveItem] = useState<MenuItems | null>(null)
+
+    const onClick = (id:number) => {
+        setActiveItem(id)
+        const navigationName = menuItems.find(item => item.id === id)?.name ?? ''
+        handleNavigation(navigationName)
+    }
 
     return (
         <div className={styles.wrapper}>
@@ -23,19 +32,21 @@ const Header = ({
                     {
                         menuItems.map(item => {
                             return (
+                                <Link href={item.id === MenuItems.wiki ? '/wiki' : `/#${item.name}`}>
                                 <div
                                     key={item.id}
                                     className={cn(styles.menuItem, item.id === activeItem && styles.menuItemActive)}
-                                    onClick={() => setActiveItem(item.id)}
+                                    onClick={() => onClick(item.id)}
                                 >
                                     {item.title}
                                 </div>
+                                </Link>
                             )
                         })
                     }
                 </div>
                 <ServerBlock />
-                <DonatButton getDonat={getDonat}/>
+                <DonatButton getDonat={getDonat} />
             </div>
         </div>
     )

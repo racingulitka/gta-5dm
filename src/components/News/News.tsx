@@ -37,7 +37,7 @@ const News = () => {
     }, [inView]);
 
     return (
-        <div className={styles.wrapper} ref={ref}>
+        <div id='news' className={styles.wrapper} ref={ref}>
             {isVisible &&
                 <motion.div className={styles.topLeftBlock} initial={{ width: 0 }} animate={{ width: '100%' }} transition={{ duration: stepDuration, delay: step1Delay }} viewport={{ once: false }}>
                     <motion.div initial={{ opacity: 0, transform: 'translate(0, -51px)' }} animate={{ opacity: 1, transform: 'translate(0,0)' }} transition={{ duration: stepDuration, delay: step4Delay }}>
@@ -95,7 +95,7 @@ const News = () => {
                             <div className={styles.text}>{newsArr[1].text}</div>
                             <div className={styles.footer}>
                                 <div className={styles.date}>{newsArr[1].date}</div>
-                                <DetailsButton backgroundColor='rgba(26, 26, 30, 0.35)' />
+                                <DetailsButton backgroundColor={true} />
                             </div>
                         </motion.div>
                         <motion.div className={styles.image} initial={{ opacity: 0, transform: 'translate(0, 30px) scale(0.9)' }} animate={{ opacity: 1, transform: 'translate(0, 0) scale(1)' }} transition={{ duration: stepDuration, delay: step3Delay }}>

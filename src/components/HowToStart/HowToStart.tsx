@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const HowToStart = () => {
     return (
-        <div className={styles.wrapper}>
+        <div id='howToStart' className={styles.wrapper}>
             <Image src={logo} alt='logo' className={styles.logo} />
             <div className={styles.header}>
                 <h2 className={styles.title}>Как начать играть</h2>

@@ -13,20 +13,24 @@
   font-style: normal;
   font-weight: 500;
   line-height: 171%;
+  transition: 0.3s;
+  position: relative;
+  z-index: 2;
   transition:0.3s;
-  position:relative;
-  z-index:2;
-  &:hover{
-    background: #E4A520;
+  &:hover {
+    background: #e4a520;
     box-shadow: 0px 0px 27.7px 0px rgba(228, 165, 32, 0.25);
-    color: #64480C; 
+    color: #64480c;
     transition: 0.3s;
   }
-  &.mouseDown{
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%),#E4A520;
+  &.mouseDown {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 100%
+      ),
+      #e4a520;
     box-shadow: 0px 0px 27.7px 0px rgba(228, 165, 32, 0.25);
-    color: #64480C; 
+    color: #64480c;
+  }
 }
-}
-
-

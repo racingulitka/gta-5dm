@@ -12,7 +12,7 @@ import ak2Image from './assets/ak2Image.png'
 
 const NewsMobile = () => {
     return (
-        <div className={styles.wrapper}>
+        <div id='news' className={styles.wrapper}>
             <Image src={gunImage} alt='gunImage' className={styles.gunImage} />
             <Image src={akImage} alt='akImage' className={styles.akImage} />
             <Image src={ak2Image} alt='ak2Image' className={styles.ak2Image} />
@@ -38,7 +38,7 @@ const NewsMobile = () => {
                                 </div>
                             <div className={styles.footer}>
                                 <div className={cn(styles.date, item.id === 3 && styles.yellowCard)}>{item.date}</div>
-                                <DetailsButton backgroundColor={item.id === 3 ? 'rgba(26, 26, 30, 0.35)' : undefined}/>
+                                <DetailsButton backgroundColor={item.id === 3}/>
                             </div>
                         </div>
                     )

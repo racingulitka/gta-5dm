@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const HowToStartMobile = () => {
     return (
-        <div className={styles.wrapper}>
+        <div id='howToStart' className={styles.wrapper}>
             <div className={styles.header}>
                 <h2 className={styles.title}>Как начать играть</h2>
                 <div className={styles.pseudoButton}>Выполните всего 3 шага</div>

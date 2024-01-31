@@ -1,0 +1,86 @@
+.wrapper {
+  width: min(1920px, 100vw);
+  height: fit-content;
+  background: #0e0e10;
+  position: relative;
+  .titleBlock {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 43px;
+    margin: 238px 0 0 341px;
+    .title {
+      display: flex;
+      flex-flow: row wrap;
+      width: 554px;
+      height: 168px;
+      color: #fff;
+      font-family: Gilroy;
+      font-size: 67px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      & span:nth-child(2) {
+        color: #daaf2d;
+        font-style: italic;
+        margin-left: 10px;
+      }
+      & span:nth-child(3) {
+        background: linear-gradient(180deg, #de851f 7%, #db1c1c 121.63%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-style: italic;
+        margin-left: 1px;
+        padding-right: 3px;
+      }
+      & span:last-child {
+        color: #e4a520;
+        margin-left: 10px;
+      }
+    }
+    .description {
+      color: rgba(255, 255, 255, 0.55);
+      font-family: Gilroy;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 29px;
+      width: 515px;
+      height: auto;
+    }
+    .info {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 44px;
+      .infoItem {
+        .infoValue {
+          color: #daaf2d;
+          font-family: Gilroy;
+          font-size: 45px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: normal;
+        }
+        .infoTitle {
+          color: rgba(255, 255, 255, 0.55);
+          font-family: Gilroy;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 29px;
+        }
+      }
+    }
+  }
+  .categoryBlock{
+    width:min(1255px, 100vw);
+    height:auto;
+    
+  }
+}

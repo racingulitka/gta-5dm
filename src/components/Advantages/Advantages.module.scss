@@ -83,12 +83,13 @@
     .imageBlock {
       flex: 1 1 679px;
       max-height: 477px;
-      overflow: hidden;
+      //overflow: hidden;
       border-radius: 15px;
       transform-origin: bottom;
       .image {
         width: 679px;
         height: 477px;
+        border-radius: 15px;
       }
     }
     .infoBlock {
