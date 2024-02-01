@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Wiki.module.scss'
 import { wikiArrInfo, wikiArr } from './Wiki.config';
-//import cn from 'classnames'
+import WeaponCategory from './WeaponCategory/WeaponCategory';
+import unionImage from './assets/Union.svg'
+import Image from 'next/image';
 
 export default function Wiki() {
     return (
         <div className={styles.wrapper}>
+            <div className={styles.overlayContainer}>
+                <div className={styles.circle}></div>
+                <Image src={unionImage} alt='unionImage' className={styles.img} />
+            </div>
+
             <div className={styles.titleBlock}>
                 <div className={styles.title}>
                     <span>ОРУЖИЕ</span>
@@ -28,14 +35,12 @@ export default function Wiki() {
                 </div>
             </div>
             {
-                    wikiArr.map(item => {
-                        return(
-                            <div key={item.categoryId} className={styles.categoryBlock}>
-                                
-                            </div>
-                        )
-                    })
-                }
+                wikiArr.map(item => {
+                    return (
+                        <WeaponCategory key={item.categoryId} wikiArr={item} />
+                    )
+                })
+            }
         </div>
     )
 }

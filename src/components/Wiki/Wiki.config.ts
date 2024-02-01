@@ -30,6 +30,11 @@ export const wikiArr = [
                 title:'Калашников',
                 icon:defaultWeaponImage
             },
+            {
+                id:6,
+                title:'Танто',
+                icon:defaultWeaponImage
+            },
         ]
     },
     {

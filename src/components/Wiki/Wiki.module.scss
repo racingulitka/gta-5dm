@@ -1,8 +1,34 @@
 .wrapper {
   width: min(1920px, 100vw);
-  height: fit-content;
+  height: auto;
   background: #0e0e10;
   position: relative;
+  & > div:nth-child(4) {
+    margin: 168px auto 48px;
+  }
+  .overlayContainer {
+    position: absolute;
+    top: 419px;
+    left: 1085px;
+    .circle {
+      position: relative;
+      width: 274px;
+      height: 274px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background:rgba(218, 175, 45, 0.5);
+      mix-blend-mode: overlay;
+    }
+    .img {
+      width: 274px;
+      height: 274px;
+      object-fit: cover;
+    }
+  }
+
   .titleBlock {
     display: flex;
     flex-flow: column nowrap;
@@ -77,10 +103,5 @@
         }
       }
     }
-  }
-  .categoryBlock{
-    width:min(1255px, 100vw);
-    height:auto;
-    
   }
 }

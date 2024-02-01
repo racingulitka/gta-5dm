@@ -46,20 +46,22 @@ const Advantages = () => {
                                 className={styles.imageBlock}
                             >
                                 <Parallax
-                                    speed={item.id !== 2 ? -2 : 2}
+                                    speed={item.id !== 2 ? 0 : 5}
                                     translateX={item.id !== 2 ? [-8, 0] : [8, 0]}
-                                    opacity={[1, 0.1]}
-                                    easing={[0, 2, 0.5, -2]}
+                                    opacity={[0, 1]}
+                                    easing={[.36,.72,.48,1.03]}
+                                    //easing={[0, 2, 0.5, -2]}
 
                                 >
                                     <Image src={item.image} alt='image' className={styles.image} />
                                 </Parallax>
                             </div>
                             <Parallax
-                                speed={item.id !== 2 ? 2 : -2}
+                                speed={item.id !== 2 ? 5 : 0}
                                 translateX={item.id !== 2 ? [8, 0] : [-8, 0]}
-                                opacity={[1, 0.5]}
-                                easing={[0, 2, 0.5, -2]}
+                                opacity={[0, 1]}
+                                easing={[.36,.72,.48,1.03]}
+                                //easing={[0, 2, 0.5, -2]}
                                 className={styles.infoBlock}
 
                             >
