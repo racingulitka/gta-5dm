@@ -115,15 +115,18 @@
         @include infoBlock();
         .title {
           @include title();
+          color: #1a1a1e;
         }
         .text {
           @include text();
+          color: rgba(26, 26, 30, 0.55);
         }
         .footer {
           @include footer();
           margin-top: 26px;
           .date {
             @include date();
+            color: rgba(26, 26, 30, 0.55);
           }
         }
       }

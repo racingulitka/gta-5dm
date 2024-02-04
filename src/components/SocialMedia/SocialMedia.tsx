@@ -45,6 +45,7 @@ const SocialMedia = () => {
                                     color={item.color}
                                     textShadow={item.textShadow}
                                     textBackground={item.textBackground}
+                                    link={item.link}
                                 />
                             )
                         })

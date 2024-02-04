@@ -66,7 +66,7 @@ const News = () => {
                             <div className={styles.text}>{newsArr[3].text}</div>
                             <div className={styles.footer}>
                                 <div className={styles.date}>{newsArr[3].date}</div>
-                                <DetailsButton />
+                                <DetailsButton backgroundColor={true}/>
                             </div>
                         </motion.div>
                     </div>

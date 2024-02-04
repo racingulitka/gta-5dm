@@ -15,6 +15,7 @@ export const mediaButtonsArr = [
         color:'#7289DA',
         textShadow:'0px 4px 35px #7289DA',
         textBackground:'',
+        link:'',
     },
     {
         id:2,
@@ -25,6 +26,7 @@ export const mediaButtonsArr = [
         color:'#FF4343',
         textShadow:'0px 4px 35px #FF3D3D',
         textBackground:'',
+        link:'https://www.youtube.com/channel/UCF9XMsedDCHK0on3WW34YFA',
     },
     {
         id:3,
@@ -35,6 +37,7 @@ export const mediaButtonsArr = [
         color:'',
         textShadow:'0px 4px 35px #A1A1A1',
         textBackground: 'linear-gradient(90deg, #FFF 15.58%, #3C3C3C 190.26%)',
+        link:'https://www.tiktok.com/@gta5dm',
     },
     {
         id:4,
@@ -45,6 +48,7 @@ export const mediaButtonsArr = [
         color:'#7DD0FF',
         textShadow:'0px 4px 35px #7DD0FF',
         textBackground:'',
+        link:'',
     },
     {
         id:5,
@@ -54,7 +58,8 @@ export const mediaButtonsArr = [
         iconBoxShadow:'0px 0px 47.033px 0px rgba(235, 105, 153, 0.55)',
         color:'',
         textShadow:'0px 4px 35px #EC6A8F',
-        textBackground:'linear-gradient(180deg, #E160C9 0%, #EC6A8F 47.92%, #FD7A54 100%)'
+        textBackground:'linear-gradient(180deg, #E160C9 0%, #EC6A8F 47.92%, #FD7A54 100%)',
+        link:'https://www.instagram.com/gta5dm/',
     },
     {
         id:6,
@@ -65,5 +70,6 @@ export const mediaButtonsArr = [
         color:'',
         textShadow:'0px 4px 35px #50ADFD',
         textBackground:'linear-gradient(90deg, #50ADFD 15.58%, #20527D 190.26%)',
+        link:'https://vk.com/legiondm_gta5',
     }
 ]

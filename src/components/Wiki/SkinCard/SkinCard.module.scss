@@ -1,0 +1,66 @@
+@mixin lines() {
+  width: 127px;
+  height: 7px;
+  border-radius: 12px;
+}
+
+@mixin baseFont() {
+  text-align: center;
+  font-family: Gilroy;
+  font-style: normal;
+  line-height: 23.2px;
+}
+
+.wrapper {
+  width: 293px;
+  height: 331px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  &:hover{
+    cursor:pointer;
+  }
+  .header {
+    margin: 17px auto 0;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 6px;
+    .leftLine {
+      @include lines();
+      background-color: #f8d749;
+    }
+    .rightLine {
+      @include lines();
+      background-color: #d85752;
+    }
+  }
+  .weaponTitle {
+    @include baseFont();
+    margin: 19px auto 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .skinTitle {
+    @include baseFont();
+    margin: 6px auto 0;
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .icon {
+    margin: 33px auto 0;
+    height: 117px;
+    width: auto;
+  }
+  .price {
+    @include baseFont();
+    margin: 33px auto 0;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
