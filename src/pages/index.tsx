@@ -16,19 +16,12 @@ import News from '@/components/News/News'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import HowToStartMobile from '@/components/mobile/HowToStartMobile/HowToStartMobile'
 import NewsMobile from '@/components/mobile/NewsMobile/NewsMobile'
+import { handleNavigation } from '@/utils/handleNavigation'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [mobileView, setMobileView] = useState(false);
   const [showPaymentModal, setShowPaymentModal] = useState<boolean>(false)
-
-  const handleNavigation = (sectionId: string) => {
-    console.log('nav')
-    const sectionToGo = document.getElementById(sectionId)
-    if (sectionToGo) {
-      sectionToGo.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
 
   useEffect(() => {
     const updateMobileView = () => {

@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import styles from './WeaponCategory.module.scss'
 import cn from 'classnames'
-import { WikiArr } from '../Wiki.typings'
+import { CategoryArr, WikiArr } from '../Wiki.typings'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const WeaponCategory = ({
-    wikiArr,
+    wikiArr
 }: {
     wikiArr: WikiArr
 }) => {
@@ -25,16 +26,21 @@ const WeaponCategory = ({
                 {
                     wikiArr.categoryArr.map(weapon => {
                         return (
-                            <div key={weapon.id} className={styles.weapon}>
-                                <Image src={weapon.icon} alt='weaponIcon' width={163} />
-                                <div className={styles.weaponName}>{weapon.title}</div>
-                            </div>
-                        )
+                            <Link href={`/wiki/${weapon.title}`}>
+                                <div
+                                    key={weapon.id}
+                                    className={styles.weapon}
+                                >
+                                    <Image src={weapon.icon} alt='weaponIcon' width={163} />
+                                    <div className={styles.weaponName}>{weapon.title}</div>
+                                </div>
+                                </Link>
+                                )
                     })
                 }
-            </div>
+                            </div>
         </div>
-    )
+            )
 }
 
-export default WeaponCategory
+            export default WeaponCategory

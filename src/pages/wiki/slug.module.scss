@@ -1,0 +1,183 @@
+@mixin leftBlocks() {
+  width: 332px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid transparent;
+}
+
+.wrapper {
+  width: min(1920px, 100vw);
+  height: auto;
+  background: #0e0e10;
+  margin: 0 auto;
+  position:relative;
+  .header{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width:min(1920px, 100vw);
+    height:auto;
+    margin:0 auto;
+  }
+  .smallCross1{
+    width:46px;
+    height:46px;
+    position:absolute;
+    top: 69px;
+    left:200px;
+  }
+  .smallCross2{
+    width:46px;
+    height:46px;
+    position:absolute;
+    top: 845px;
+    left:127px;
+  }
+  .middleCross{
+    width:90px;
+    height:90px;
+    position:absolute;
+    top: 1003px;
+    right:150px;
+  }
+  .bigCross1{
+    width:150px;
+    height:150px;
+    position:absolute;
+    mix-blend-mode: overlay;
+    top: 737px;
+    right:69px;
+  }
+  .bigCross2{
+    width:150px;
+    height:150px;
+    position:absolute;
+    mix-blend-mode: overlay;
+    top: 1712px;
+    left:129px;
+  }
+  & main {
+    width: 100%;
+    min-height: 100vh;
+    .contentContainer {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: flex-start;
+      height: auto;
+      position: relative;
+      gap: 38px;
+      padding:106px 0 0 0;
+      .leftContainer {
+        width: 332px;
+        height: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 28px;
+        .weaponIcon {
+          @include leftBlocks();
+          height: 332px;
+          .icon {
+            width: 266px;
+            height: auto;
+            margin: 78px auto 49px;
+            display: block;
+          }
+          .title {
+            color: #fff;
+            font-family: Gilroy;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.2px;
+            text-align: center;
+          }
+        }
+      }
+      .characteristics {
+        @include leftBlocks();
+        height: 378px;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 10px;
+        padding-top: 26px;
+        .weaponParameter {
+          width: 279px;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          margin: 0 auto;
+          .weaponParameterName {
+            color: #daaf2d;
+            font-family: Gilroy;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 23.2px;
+            text-transform: uppercase;
+          }
+          .weaponParameterValue {
+            color: #fff;
+            text-align: right;
+            font-family: Gilroy;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 23.2px;
+            text-transform: uppercase;
+            .yellow {
+              color: #daaf2d;
+            }
+          }
+        }
+      }
+      .description {
+        @include leftBlocks();
+        height: 356px;
+        padding: 27px;
+        color: rgba(255, 255, 255, 0.55);
+        text-align: justify;
+        font-family: Gilroy;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 23.2px;
+      }
+      .spreadControl {
+        @include leftBlocks();
+        height: 356px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap:34px;
+        .title {
+          color: #fff;
+          text-align: justify;
+          font-family: Gilroy;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 23.2px;
+        }
+        .image{
+            width: 96px;
+            height:auto;
+        }
+      }
+      .rightContainer{
+        width:min(945px, calc(100% - 332px - 38px));
+        height:auto;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap:33px;
+      }
+    }
+  }
+}

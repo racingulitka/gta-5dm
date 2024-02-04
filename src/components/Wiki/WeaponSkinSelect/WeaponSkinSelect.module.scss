@@ -1,0 +1,30 @@
+.wrapper {
+  width: min(1920px, 100vw);
+  height: 2025px;
+  background: #0e0e10;
+  .content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap:10px;
+    overflow-y: scroll;
+    height:1500px;
+    .leftSection{
+        margin-top:10px;
+        width:332px;
+        height:100px;
+        border:1px solid red;
+        flex:0 0 auto;
+        position:sticky;
+        top:10px;
+    }
+    .rightSection{
+        width:1000px;
+        overflow-y: auto;
+        flex:1 0 auto;
+        border:1px solid green;
+        height:2000px;
+    }
+  }
+}

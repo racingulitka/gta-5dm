@@ -1,33 +1,119 @@
 .wrapper {
   width: min(1920px, 100vw);
-  height: auto;
+  height: max(2754px, 1px);
   background: #0e0e10;
   position: relative;
-  & > div:nth-child(4) {
+  & > div:nth-child(20) {
     margin: 168px auto 48px;
   }
-  .overlayContainer {
+  .circle {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
     position: absolute;
-    top: 419px;
-    left: 1085px;
-    .circle {
-      position: relative;
-      width: 274px;
-      height: 274px;
-      border-radius: 50%;
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background:rgba(218, 175, 45, 0.5);
-      mix-blend-mode: overlay;
-    }
+    top: 197px;
+    left: 1000px;
+    background: radial-gradient(rgba(218, 175, 45, 0.5) 0%, transparent 70%);
+    mask-image:radial-gradient(#000 0%, transparent 70%);
     .img {
-      width: 274px;
-      height: 274px;
-      object-fit: cover;
+      width: 600px;
+      height: 600px;
+      mix-blend-mode: overlay;
+      opacity:0.05;
     }
   }
+
+  .crossBlurSmall{
+    position:absolute;
+    top:21px;
+    right:139px;
+    mix-blend-mode: overlay;
+  }
+  .crossSharpSmall1{
+    position:absolute;
+    top:55px;
+    left:200px;
+  }
+  .crossSharpSmall2{
+    position:absolute;
+    top:347px;
+    right:338px;
+  }
+  .crossSharpSmall3{
+    position:absolute;
+    top:831px;
+    left:127px;
+  }
+  .crossSharpSmall4{
+    position:absolute;
+    top:1455px;
+    right:228px;
+  }
+  .ak1{
+    position:absolute;
+    top:156px;
+    left:1038px;
+  }
+  .ak2{
+    position:absolute;
+    top:276px;
+    left:826px;
+  }
+  .ak3{
+    position:absolute;
+    top:1088px;
+    left:0px;
+  }
+  .ak4{
+    position:absolute;
+    top:2439px;
+    right:0px;
+  }
+  .crossBlurLarge1{
+    position:absolute;
+    top:487px;
+    left:246px;
+    mix-blend-mode: overlay;
+  }
+  .crossBlurLarge2{
+    position:absolute;
+    top:737px;
+    right:69px;
+    mix-blend-mode: overlay;
+  }
+  .crossBlurLarge3{
+    position:absolute;
+    top:1712px;
+    left:129px;
+    mix-blend-mode: overlay;
+  }
+  .baseball1{
+    position: absolute;
+    top:612px;
+    left:961px;
+  }
+  .baseball2{
+    position: absolute;
+    top:2170px;
+    left:137px;
+  }
+  .gun1{
+    position: absolute;
+    top:605px;
+    left:1436px;
+  }
+  .gun2{
+    position: absolute;
+    top:1604px;
+    right:30px;
+  }
+  .crossSharpLarge{
+    position: absolute;
+    top:2269px;
+    right:150px;
+  }
+
 
   .titleBlock {
     display: flex;
