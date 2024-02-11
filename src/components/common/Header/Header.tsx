@@ -18,7 +18,7 @@ const Header = ({
 
     const [activeItem, setActiveItem] = useState<MenuItems | null>(null)
 
-    const onClick = (id:number) => {
+    const onClick = (id: number) => {
         setActiveItem(id)
         const navigationName = menuItems.find(item => item.id === id)?.name ?? ''
         handleNavigation(navigationName)
@@ -32,14 +32,13 @@ const Header = ({
                     {
                         menuItems.map(item => {
                             return (
-                                <Link href={item.id === MenuItems.wiki ? '/wiki' : `/#${item.name}`}>
-                                <div
-                                    key={item.id}
-                                    className={cn(styles.menuItem, item.id === activeItem && styles.menuItemActive)}
-                                    onClick={() => onClick(item.id)}
-                                >
-                                    {item.title}
-                                </div>
+                                <Link key={item.id} href={item.id === MenuItems.wiki ? '/wiki' : `/#${item.name}`}>
+                                    <div
+                                        className={cn(styles.menuItem, item.id === activeItem && styles.menuItemActive)}
+                                        onClick={() => onClick(item.id)}
+                                    >
+                                        {item.title}
+                                    </div>
                                 </Link>
                             )
                         })

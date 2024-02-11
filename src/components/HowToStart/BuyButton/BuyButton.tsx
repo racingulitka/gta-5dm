@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import styles from './BuyButton.module.scss'
 import cn from 'classnames'
 
-const BuyButton = () => {
+const BuyButton = ({width}:{width?:number}) => {
 
     const [buttonState, setButtonState] = useState<boolean>(false)
     const buttonRef = useRef<HTMLDivElement | null>(null)
@@ -30,7 +30,7 @@ const BuyButton = () => {
     }, [])
 
     return (
-        <div ref={buttonRef} className={cn(styles.wrapper, buttonState && styles.mouseDown)}>
+        <div ref={buttonRef} className={cn(styles.wrapper, buttonState && styles.mouseDown)} style={{width: width ? `${width}px` : '123px'}}>
             Купить
         </div>
     )

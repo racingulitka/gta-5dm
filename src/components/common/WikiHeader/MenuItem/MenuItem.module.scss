@@ -1,0 +1,78 @@
+.wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 96px 0 0;
+  gap: 10px;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+  .title {
+    color: #fff;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    user-select: none;
+  }
+  .titleActive {
+    color: #e4a520;
+  }
+  .openIcon {
+    transform: rotate(0deg);
+    transition: 0.3s;
+  }
+  .openIconActive {
+    transform: rotate(180deg);
+    transition: 0.3s;
+  }
+  .menuSelect {
+    position: absolute;
+    top: 40px;
+    left: 51px;
+    width: 0;
+    height: 0;
+    border-radius: 6px;
+    background: #252529;
+    z-index: 50;
+    opacity:0;
+    transition:0.3s;
+    .weapon {
+      height: 50px;
+      width: auto;
+      padding: 0 15px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      .icon {
+        width: 37px;
+        height: auto;
+      }
+      .title {
+        color:#7C7C89;
+        text-align: center;
+        font-family: Gilroy;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .titleActive{
+        color:#E4A520;
+      }
+    }
+  }
+  .menuSelectActive{
+    width:auto;
+    height:auto;
+    transition:0.3s;
+    opacity:1;
+  }
+}

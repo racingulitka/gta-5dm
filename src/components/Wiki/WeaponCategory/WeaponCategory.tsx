@@ -26,21 +26,20 @@ const WeaponCategory = ({
                 {
                     wikiArr.categoryArr.map(weapon => {
                         return (
-                            <Link href={`/wiki/${weapon.title}`}>
+                            <Link key={weapon.id} href={`/wiki/${weapon.title}`}>
                                 <div
-                                    key={weapon.id}
                                     className={styles.weapon}
                                 >
                                     <Image src={weapon.icon} alt='weaponIcon' width={163} />
                                     <div className={styles.weaponName}>{weapon.title}</div>
                                 </div>
-                                </Link>
-                                )
+                            </Link>
+                        )
                     })
                 }
-                            </div>
+            </div>
         </div>
-            )
+    )
 }
 
-            export default WeaponCategory
+export default WeaponCategory

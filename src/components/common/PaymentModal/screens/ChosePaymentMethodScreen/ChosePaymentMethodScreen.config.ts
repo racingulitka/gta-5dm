@@ -1,10 +1,10 @@
-import CardItemIcon from "./assets/cardItemIcon"
+import CardItemIcon from './assets/CardItemIcon'
 import ApplePayItemIcon from './assets/ApplePayItemIcon'
 import GPayItemIcon from './assets/GpayItemIcon'
 import IOItemIcon from './assets/IOItemIcon'
 import QiwiItemIcon from './assets/QiwiItemIcon'
-import SamsungPayItemIcon from './assets/samsungPayItemIcon'
-import SbpItemIcon from './assets/sbpItemIcon'
+import SamsungPayItemIcon from './assets/SamsungPayItemIcon'
+import SbpItemIcon from './assets/SbpItemIcon'
 
 export const paymentMethodsArr = [
     {

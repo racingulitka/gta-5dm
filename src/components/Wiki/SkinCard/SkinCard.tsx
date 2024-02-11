@@ -16,15 +16,16 @@ const SkinCard = ({
 }) => {
     
     const leftPrice = price[0].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
-    const rightPrice = price[1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
-    const priceFormatted = leftPrice + ' $' + ' - ' + rightPrice + ' $'
+    //const rightPrice = price[1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+    //const priceFormatted = leftPrice + ' $' + ' - ' + rightPrice + ' $'
+    const priceFormatted = leftPrice + ' dmc'
 
     return(
         <div className={styles.wrapper}>
-            <div className={styles.header}>
+            {/* <div className={styles.header}>
                 <div className={styles.leftLine}></div>
                 <div className={styles.rightLine}></div>
-            </div>
+            </div> */}
             <div className={styles.weaponTitle}>{weaponTitle}</div>
             <div className={styles.skinTitle}>{skinTitle}</div>
             <Image className={styles.icon} src={icon} alt='skinIcon' />

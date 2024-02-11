@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router'
 import { wikiArr } from '@/components/Wiki/Wiki.config'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './slug.module.scss'
 import mainStyles from '@/styles/Home.module.css'
-import Header from '@/components/common/Header/Header'
+import WikiHeader from '../../components/common/WikiHeader/WikiHeader'
 import Footer from '@/components/common/Footer/Footer'
 import { handleNavigation } from '@/utils/handleNavigation'
 import PaymentModal from '@/components/common/PaymentModal/PaymentModal'
@@ -12,8 +12,41 @@ import SkinCard from '@/components/Wiki/SkinCard/SkinCard'
 import smallCross from './assets/smallCross.svg'
 import middleCross from './assets/middleCross.svg'
 import bigCross from './assets/bigCross.svg'
+import Link from 'next/link'
+import toTheUpIcon from './assets/toTheUpIcon.svg'
+import SortSelect from '@/components/common/SortSelect/SortSelect'
+//import { Category } from '@/server/models'
 
-export default function Page() {
+interface WeaponCharacteristics {
+  reloadDuration: { name: string, value: string[], units?: string },
+  bodyDamage: { name: string, value: string[], units?: string },
+  headDamage: { name: string, value: string[], units?: string },
+  paymentForKill: { name: string, value: string[], units?: string },
+  bulletsBox: { name: string, value: string[], units?: string },
+  inGamePrice: { name: string, value: string[], units?: string },
+  accuracyRange: { name: string, value: string[], units?: string },
+  accuracyTemp: { name: string, value: string[], units?: string },
+  runSpeed: { name: string, value: string[], units?: string },
+  side: { name: string, value: string[], units?: string },
+}
+
+// export const getServerSideProps = async () => {
+//   const category = await Category.findAll()
+//   const rawData = category.map((d) => ({
+//     ...d.toJSON(),
+//   }));
+//   return {props:{weapons:rawData}}
+// };
+
+export default function Page(/*{weapons}:{weapons:any[]}*/) {
+
+  //console.log(weapons[0].title)
+
+  const onScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const [sortId, setSortId] = useState<number>(1)
 
   const findWeapon = () => {
     for (const category of wikiArr) {
@@ -22,9 +55,38 @@ export default function Page() {
     }
   }
 
+  const sortSkins = (id: number) => {
+    let ss
+    if (weapon) {
+      if (weapon.skins) {
+        if (id === 1) {
+          ss = weapon.skins.sort((a, b) => {
+            return a.price[0] - b.price[0]
+          })
+        } else if(id === 2){
+          ss = weapon.skins.sort((a, b) => {
+            return b.price[0] - a.price[0]
+          })
+        }
+      }
+    }
+    return ss
+  }
+
   const router = useRouter()
   const weapon = findWeapon()
+  const sortedSkins = sortSkins(sortId)
   const [showPaymentModal, setShowPaymentModal] = useState<boolean>(false)
+  const [isScrolled, setIsScrolled] = useState<number>(0)
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(document.documentElement.scrollTop)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => removeEventListener('scroll', handleScroll)
+  }, [])
 
   const onRequestClose = () => {
     setShowPaymentModal(false)
@@ -36,7 +98,7 @@ export default function Page() {
     <>
       <div className={styles.wrapper}>
         <header className={styles.header}>
-          <Header handleNavigation={handleNavigation} getDonat={setShowPaymentModal} />
+          <WikiHeader getDonat={setShowPaymentModal} />
         </header>
         <main className={mainStyles.main}>
           <Image src={smallCross} alt='smallCross' className={styles.smallCross1} />
@@ -45,54 +107,76 @@ export default function Page() {
           <Image src={bigCross} alt='bigCross' className={styles.bigCross1} />
           <Image src={bigCross} alt='bigCross' className={styles.bigCross2} />
           {
+            isScrolled > 1080 &&
+            <div className={styles.toTop} onClick={() => onScrollTop()}>
+              <div className={styles.square}>
+                <Image src={toTheUpIcon} alt='toTheUpIcon' className={styles.toTheUpIcon} />
+              </div>
+              <div className={styles.title}>Наверх</div>
+            </div>
+          }
+          {
             showPaymentModal &&
             <PaymentModal onRequestClose={onRequestClose} />
           }
           {weapon &&
             <div className={styles.contentContainer}>
+              <div className={styles.activePage}><Link href={'/wiki'}>Главная</Link> / <span>{router.query.slug}</span></div>
+              <div className={styles.sortSelect}>
+                {/* <SortSelect
+                  setSortId={setSortId}
+                /> */}
+              </div>
               <div className={styles.leftContainer}>
-                <div className={styles.weaponIcon}>
-                  <Image src={weapon.icon} alt='weaponIcon' className={styles.icon} />
-                  <div className={styles.title}>{weapon.title}</div>
-                </div>
-                <div className={styles.characteristics}>
-                  {
-                    Object.keys(weapon.characteristics).map((item, index) => {
-                      const data = weapon.characteristics[item]
-                      return (
-                        <div key={index} className={styles.weaponParameter}>
-                          <div className={styles.weaponParameterName}>{data.name}</div>
-                          <div className={styles.weaponParameterValue}>
-                            <span>{data.value[0]} </span>
-                            {
-                              data.value.length > 1 && <span>/{data.value[1]}</span>
-                            }
-                            {
-                              data.units && <span className={styles.yellow}>{data.units}</span>
-                            }
+                <div className={styles.justBlockForSticky}></div>
+                <div className={styles.sticky}>
+                  <div className={styles.weaponIcon}>
+                    <Image src={weapon.icon} alt='weaponIcon' className={styles.icon} />
+                    <div className={styles.title}>{weapon.title}</div>
+                  </div>
+                  <div className={styles.characteristics}>
+                    {weapon.characteristics &&
+                      Object.keys(weapon.characteristics).map((item, index) => {
+                        const key = item as keyof WeaponCharacteristics;
+                        const data = weapon.characteristics[key]
+                        return (
+                          <div key={index} className={styles.weaponParameter}>
+                            <div className={styles.weaponParameterName}>{data.name}</div>
+                            <div className={styles.weaponParameterValue}>
+                              <span>{data.value[0]} </span>
+                              {
+                                data.value.length > 1 && <span>/{data.value[1]}</span>
+                              }
+                              {
+                                data.units && <span className={styles.yellow}>{data.units}</span>
+                              }
+                            </div>
                           </div>
-                        </div>
-                      )
-                    })
-                  }
-                </div>
-                <div className={styles.description}>{weapon.description}</div>
-                <div className={styles.spreadControl}>
+                        )
+                      })
+                    }
+                  </div>
+                  <div className={styles.description}>{weapon.description}</div>
+                  {/* <div className={styles.spreadControl}>
                   <div className={styles.title}>Контроль разброса</div>
                   <Image src={weapon.spreadControl} alt='spreadControlImage' className={styles.image} />
+                </div> */}
                 </div>
+
               </div>
               <div className={styles.rightContainer}>
                 {
-                  weapon.skins && weapon.skins.map(skin => {
+                  // weapon.skins && weapon.skins.map(skin => {
+                  sortedSkins && sortedSkins.map(skin => {
                     return (
-                      <SkinCard
-                        key={skin.id}
-                        weaponTitle={weapon.title}
-                        skinTitle={skin.title}
-                        icon={skin.icon}
-                        price={skin.price}
-                      />
+                      <Link key={skin.id} href={`/wiki/${weapon.title}/${skin.id}`}>
+                        <SkinCard
+                          weaponTitle={weapon.title}
+                          skinTitle={skin.title}
+                          icon={skin.icon}
+                          price={skin.price}
+                        />
+                      </Link>
                     )
                   })
                 }

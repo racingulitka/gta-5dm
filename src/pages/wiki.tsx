@@ -2,12 +2,13 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Footer from '../components/common/Footer/Footer'
-import Header from '@/components/common/Header/Header'
+import WikiHeader from '../components/common/WikiHeader/WikiHeader'
 import HamburgerMenu from '@/components/common/HamburgerMenu/HamburgerMenu'
 import { useState, useEffect } from 'react'
 import PaymentModal from '@/components/common/PaymentModal/PaymentModal'
 import Wiki from '@/components/Wiki/Wiki'
 import { handleNavigation } from '@/utils/handleNavigation'
+import MobileWiki from '@/components/Wiki/MobileWiki'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -39,11 +40,11 @@ export default function WikiMain() {
   return (
     <>
       <Head>
-          <title>Wiki</title>
-          <meta name=" descripti on" content="Ge nerated   by  create next app" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
-          <link rel='stylesheet' href='index.css' />
+        <title>Wiki</title>
+        <meta name=" descripti on" content="Ge nerated   by  create next app" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel='stylesheet' href='index.css' />
       </Head>
       <header className={styles.header}>
         {
@@ -52,20 +53,22 @@ export default function WikiMain() {
               getDonat={setShowPaymentModal}
               handleNavigation={handleNavigation}
             />
-            : <Header
+            : <WikiHeader
               getDonat={setShowPaymentModal}
-              handleNavigation={handleNavigation}
             />
         }
       </header>
-        <main className={`${styles.main} ${inter.className}`}>
-          <Wiki />
-          {
-            showPaymentModal &&
-            <PaymentModal
-              onRequestClose = { onRequestClose }
-            />
-          }
+      <main className={`${styles.main} ${inter.className}`}>
+        {
+          mobileView ?
+            <MobileWiki /> : <Wiki />
+        }
+        {
+          showPaymentModal &&
+          <PaymentModal
+            onRequestClose={onRequestClose}
+          />
+        }
       </main>
       <footer className={styles.footer}>
         <Footer />

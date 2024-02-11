@@ -1,0 +1,227 @@
+.wrapper {
+  width: min(1920px, 100vw);
+  height: auto;
+  min-height: 100vh;
+  background: #0e0e10;
+  margin: 0 auto;
+  position: relative;
+  .header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: min(1920px, 100vw);
+    height: auto;
+    margin: 0 auto;
+  }
+  .smallCross1 {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 148px;
+    left: 200px;
+  }
+  .smallCross2 {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 924px;
+    left: 127px;
+  }
+  .middleCross {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 1096px;
+    right: 150px;
+  }
+  .bigCross1 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    mix-blend-mode: overlay;
+    top: 830px;
+    right: 69px;
+  }
+
+  & main {
+    width: min(1373px, 100vw);
+    height: auto;
+    min-height: 100vh;
+    margin: 92px auto 84px;
+    .contentContainer {
+      display: grid;
+      grid-template-columns: 332px 1fr;
+      align-items: flex-start;
+      gap: 43px;
+      .leftBlock {
+        width: 332px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 28px;
+        .skinCard {
+          width: 332px;
+          height: 419px;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.02);
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          .icon {
+            width: 266px;
+            height: auto;
+            margin: 78px 0 0 0;
+          }
+          .title {
+            color: #fff;
+            font-family: Gilroy;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.2px;
+            margin: 49px 0 16px;
+          }
+        }
+        .skinClass {
+          width: 332px;
+          height: 104px;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.02);
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 20px;
+          box-sizing: border-box;
+          padding: 0 0 0 27px;
+          .title {
+            color: #fff;
+            font-family: Gilroy;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.2px;
+          }
+          .lines {
+            display: flex;
+            gap: 6px;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            .leftLine {
+              width: 136px;
+              height: 7px;
+              border-radius: 12.8px;
+              background: #f8d749;
+            }
+            .rightLine {
+              width: 136px;
+              height: 7px;
+              border-radius: 12.8px;
+              background: #d85752;
+            }
+          }
+        }
+        .description {
+          width: 332px;
+          height: 356px;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.02);
+          box-sizing: border-box;
+          padding: 27px;
+          color: rgba(255, 255, 255, 0.55);
+          text-align: justify;
+          font-family: Gilroy;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 23.2px;
+        }
+        .spreadControl {
+          width: 332px;
+          height: 356px;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.02);
+          box-sizing: border-box;
+          padding: 27px 0 0 27px;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 34px;
+          .title {
+            color: #fff;
+            text-align: justify;
+            font-family: Gilroy;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 23.2px;
+          }
+          .spreadImg {
+            width: 96px;
+            height: auto;
+            align-self: center;
+          }
+        }
+      }
+      .rightBlock {
+        //width: min(998px, 80vw);
+        height: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 47px;
+        .title {
+          color: #fff;
+          text-align: justify;
+          font-family: Gilroy;
+          font-size: 35px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 23.2px;
+          letter-spacing: -0.35px;
+        }
+        .infoBlock {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 50px;
+          .content {
+            width: 474px;
+            height: auto;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 18px;
+            .title {
+              color: #fff;
+              text-align: justify;
+              font-family: Gilroy;
+              font-size: 25px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 23.2px;
+              letter-spacing: -0.25px;
+            }
+            .description {
+              color: rgba(255, 255, 255, 0.55);
+              text-align: justify;
+              font-family: Gilroy;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 23.2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.wrapper {
+  width: auto;
+  height: auto;
+  transition: 0.3s;
+  border-radius: 6px;
+  background: #252529;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 13px;
+  .selectedItem {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    &:hover {
+      cursor: pointer;
+    }
+    .title {
+      color: #7c7c89;
+      text-align: right;
+      font-family: Gilroy;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 23.2px;
+    }
+    .titleActive {
+      color: #fff;
+    }
+  }
+  .sortSelectItem {
+    width: 0;
+    height: 0;
+    opacity:0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    &:hover {
+      cursor: pointer;
+    }
+    .title {
+      color: #7c7c89;
+      text-align: right;
+      font-family: Gilroy;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 23.2px;
+    }
+    .titleActive {
+      color: #fff;
+    }
+  }
+  .sortSelectItemActive {
+    height:auto;
+    width:auto;
+    opacity: 1;
+    transition: 0.3s;
+  }
+}
+.wrapperActive {
+  height: auto;
+  transition: 0.3s;
+}

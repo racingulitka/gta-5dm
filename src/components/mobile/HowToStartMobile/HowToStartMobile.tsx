@@ -22,6 +22,7 @@ const HowToStartMobile = () => {
                     cardArr.map(item => {
                         return (
                             <HTPCard
+                                key={item.id}
                                 image={item.cardImage}
                                 step={item.id}
                                 title={item.cardTitle}

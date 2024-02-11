@@ -20,9 +20,11 @@ import { handleNavigation } from '@/utils/handleNavigation'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  
+
   const [mobileView, setMobileView] = useState(false);
   const [showPaymentModal, setShowPaymentModal] = useState<boolean>(false)
-
   useEffect(() => {
     const updateMobileView = () => {
       setMobileView(window.innerWidth < 767);
