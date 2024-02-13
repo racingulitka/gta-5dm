@@ -5,6 +5,12 @@
   border: 1px solid transparent;
 }
 
+@mixin leftBlocksMobile() {
+  width: 265px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
 .wrapper {
   width: min(1920px, 100vw);
   height: auto;
@@ -69,8 +75,8 @@
       justify-content: center;
       align-items: center;
       gap: 7px;
-      &:hover{
-        cursor:pointer;
+      &:hover {
+        cursor: pointer;
       }
       .square {
         width: 62px;
@@ -117,10 +123,10 @@
           color: #e4a520;
         }
       }
-      .sortSelect{
-        position:absolute;
-        top:38px;
-        right:0px;
+      .sortSelect {
+        position: absolute;
+        top: 38px;
+        right: 0px;
       }
       .leftContainer {
         width: 332px;
@@ -196,7 +202,7 @@
           }
           .description {
             @include leftBlocks();
-            height: 356px;
+            height: auto;
             padding: 27px;
             color: rgba(255, 255, 255, 0.55);
             text-align: justify;
@@ -243,6 +249,91 @@
         justify-content: flex-start;
         align-items: flex-start;
         gap: 33px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    & main {
+      margin: 76px auto 34px;
+      .contentContainer {
+        width:min(390px, 100vw);
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 34px;
+        .activePage {
+          position: static;
+          margin:0 0 0 10px;
+          align-self: flex-start;
+        }
+        .leftContainer {
+          width: 266px;
+          height: auto;
+          .sticky {
+            width: 100%;
+            height: fit-content;
+            position: static;
+            gap: 22px;
+            .weaponIcon {
+              @include leftBlocksMobile();
+              height: 265px;
+              .icon {
+                width: 212px;
+                margin: 62px auto 41px;
+              }
+              .title {
+                font-size: 22px;
+                line-height: 18px;
+              }
+            }
+            .characteristics {
+              @include leftBlocksMobile();
+              height: 303px;
+              gap: 8px;
+              padding-top: 21px;
+              .weaponParameter {
+                width: 223px;
+                .weaponParameterName {
+                  font-size: 12px;
+                  line-height: 18px;
+                }
+                .weaponParameterValue {
+                  font-size: 12px;
+                  line-height: 18px;
+                }
+              }
+            }
+            .description {
+              @include leftBlocksMobile();
+              padding: 30px 22px;
+              font-size: 12px;
+              line-height: 18px;
+            }
+            .spreadControl {
+              @include leftBlocksMobile();
+              height: 285px;
+              gap: 28px;
+              .title {
+                font-size: 16px;
+                line-height: 18px;
+              }
+              .image {
+                width: 76px;
+              }
+            }
+          }
+          .justBlockForSticky {
+            display:none;
+          }
+        }
+        .rightContainer {
+          width: 349px;
+          gap: 15px;
+        }
       }
     }
   }

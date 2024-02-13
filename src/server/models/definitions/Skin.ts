@@ -23,11 +23,11 @@ export class Skin extends BaseModel {
   @Column({ type: DataType.STRING })
   public icon!: string;
 
-  @Column({ type: DataType.JSONB, allowNull: false })
-  public price!: string[];
+  // @Column({ type: DataType.JSONB, allowNull: false })
+  // public price!: string[];
 
-  @Column({ type: DataType.JSONB })
-  public info!: {title:string, description:string}[];
+  // @Column({ type: DataType.JSONB })
+  // public info!: {title:string, description:string}[];
 
   @ForeignKey(() => Weapon)
   @Column({ type: DataType.INTEGER, allowNull: false })

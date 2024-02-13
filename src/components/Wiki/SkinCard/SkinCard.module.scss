@@ -4,6 +4,12 @@
   border-radius: 12px;
 }
 
+@mixin linesMobile() {
+  width: 64px;
+  height: 4px;
+  border-radius: 6px;
+}
+
 @mixin baseFont() {
   text-align: center;
   font-family: Gilroy;
@@ -20,8 +26,8 @@
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  &:hover{
-    cursor:pointer;
+  &:hover {
+    cursor: pointer;
   }
   .header {
     margin: 17px auto 0;
@@ -62,5 +68,46 @@
     color: rgba(255, 255, 255, 0.55);
     font-size: 16px;
     font-weight: 400;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    width: 166px;
+    height: 166px;
+    border-radius: 6px;
+    .header {
+      margin: 8px auto 0;
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 3px;
+      .leftLine {
+        @include linesMobile();
+        background-color: #f8d749;
+      }
+      .rightLine {
+        @include linesMobile();
+        background-color: #d85752;
+      }
+    }
+    .weaponTitle {
+      font-size: 12px;
+      line-height: 12px;
+      margin: 10px auto 0;
+    }
+    .skinTitle {
+      margin: 3px auto 0;
+      font-size: 8px;
+      line-height: 12px;
+    }
+    .icon {
+      margin: 16px auto 0;
+      height: 58px;
+    }
+    .price {
+      margin: 16px auto 0;
+      font-size: 8px;
+      line-height: 12px;
+    }
   }
 }

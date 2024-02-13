@@ -5,7 +5,6 @@ import styles from './slug.module.scss'
 import mainStyles from '@/styles/Home.module.css'
 import WikiHeader from '../../components/common/WikiHeader/WikiHeader'
 import Footer from '@/components/common/Footer/Footer'
-import { handleNavigation } from '@/utils/handleNavigation'
 import PaymentModal from '@/components/common/PaymentModal/PaymentModal'
 import Image from 'next/image'
 import SkinCard from '@/components/Wiki/SkinCard/SkinCard'
@@ -14,7 +13,9 @@ import middleCross from './assets/middleCross.svg'
 import bigCross from './assets/bigCross.svg'
 import Link from 'next/link'
 import toTheUpIcon from './assets/toTheUpIcon.svg'
-import SortSelect from '@/components/common/SortSelect/SortSelect'
+import { handleNavigation } from '@/utils/handleNavigation'
+import HamburgerMenu from '@/components/common/HamburgerMenu/HamburgerMenu'
+//import SortSelect from '@/components/common/SortSelect/SortSelect'
 //import { Category } from '@/server/models'
 
 interface WeaponCharacteristics {
@@ -42,6 +43,25 @@ export default function Page(/*{weapons}:{weapons:any[]}*/) {
 
   //console.log(weapons[0].title)
 
+  const [mobileView, setMobileView] = useState(false);
+
+  useEffect(() => {
+    const updateMobileView = () => {
+      setMobileView(window.innerWidth < 767);
+    };
+
+    // Вызовем updateMobileView при монтировании компонента
+    updateMobileView();
+
+    // Добавим слушатель события resize, чтобы обновлять mobileView при изменении размеров окна
+    window.addEventListener('resize', updateMobileView);
+
+    // Удалим слушатель при размонтировании компонента
+    return () => {
+      window.removeEventListener('resize', updateMobileView);
+    };
+  }, [])
+
   const onScrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -63,7 +83,7 @@ export default function Page(/*{weapons}:{weapons:any[]}*/) {
           ss = weapon.skins.sort((a, b) => {
             return a.price[0] - b.price[0]
           })
-        } else if(id === 2){
+        } else if (id === 2) {
           ss = weapon.skins.sort((a, b) => {
             return b.price[0] - a.price[0]
           })
@@ -98,16 +118,23 @@ export default function Page(/*{weapons}:{weapons:any[]}*/) {
     <>
       <div className={styles.wrapper}>
         <header className={styles.header}>
-          <WikiHeader getDonat={setShowPaymentModal} />
+          {
+            mobileView ?
+              <HamburgerMenu
+                getDonat={setShowPaymentModal}
+                handleNavigation={handleNavigation}
+              />
+              : <WikiHeader getDonat={setShowPaymentModal} />
+          }
         </header>
         <main className={mainStyles.main}>
-          <Image src={smallCross} alt='smallCross' className={styles.smallCross1} />
-          <Image src={smallCross} alt='smallCross' className={styles.smallCross2} />
-          <Image src={middleCross} alt='middleCross' className={styles.middleCross} />
-          <Image src={bigCross} alt='bigCross' className={styles.bigCross1} />
-          <Image src={bigCross} alt='bigCross' className={styles.bigCross2} />
+          {!mobileView && <Image src={smallCross} alt='smallCross' className={styles.smallCross1} />}
+          {!mobileView && <Image src={smallCross} alt='smallCross' className={styles.smallCross2} />}
+          {!mobileView && <Image src={middleCross} alt='middleCross' className={styles.middleCross} />}
+          {!mobileView && <Image src={bigCross} alt='bigCross' className={styles.bigCross1} />}
+          {!mobileView && <Image src={bigCross} alt='bigCross' className={styles.bigCross2} />}
           {
-            isScrolled > 1080 &&
+            isScrolled > 1080 && !mobileView &&
             <div className={styles.toTop} onClick={() => onScrollTop()}>
               <div className={styles.square}>
                 <Image src={toTheUpIcon} alt='toTheUpIcon' className={styles.toTheUpIcon} />

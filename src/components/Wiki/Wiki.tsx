@@ -17,14 +17,6 @@ import baseball2 from './assets/baseball2.png'
 import gun1 from './assets/gun1.png'
 import gun2 from './assets/gun2.png'
 import crossSharpLarge from './assets/crossSharpLarge.svg'
-// import { initDB } from '@/server/models/index';
-
-
-// export const getServerSideProps = async () => {
-//   await initDB()
-//   return {props:{}}
-// };
-
 
 export default function Wiki() {
 

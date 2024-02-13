@@ -4,8 +4,7 @@ import {Weapon} from './Weapon'
 
 @Table({
   timestamps: false,
-  tableName: "wikiCategory",
-  modelName:'WikiCategory',
+  tableName: "category",
 })
 export class WikiCategory extends BaseModel {
 

@@ -4,6 +4,7 @@ import cn from 'classnames'
 import { CategoryArr, WikiArr } from '../Wiki.typings'
 import Image from 'next/image'
 import Link from 'next/link'
+import arrowDown from './assets/arrowDown.svg'
 
 const WeaponCategory = ({
     wikiArr
@@ -21,6 +22,11 @@ const WeaponCategory = ({
             >
                 <div className={styles.text}>{wikiArr.categoryTitle}</div>
                 <div className={styles.line}></div>
+                <div className={styles.info}>
+                    <span className={styles.span1}>Показать все {wikiArr.categoryArr.length} типов</span>
+                    <span className={styles.span2}>Показать все</span>
+                    <Image src={arrowDown} alt='arrowDown' className={styles.image}/>
+                </div>
             </div>
             <div className={cn(styles.weapons, isOpened && styles.weaponsOpened)}>
                 {
@@ -30,7 +36,7 @@ const WeaponCategory = ({
                                 <div
                                     className={styles.weapon}
                                 >
-                                    <Image src={weapon.icon} alt='weaponIcon' width={163} />
+                                    <Image src={weapon.icon} alt='weaponIcon' className={styles.image} />
                                     <div className={styles.weaponName}>{weapon.title}</div>
                                 </div>
                             </Link>

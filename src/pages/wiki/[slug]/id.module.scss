@@ -49,6 +49,18 @@
     height: auto;
     min-height: 100vh;
     margin: 92px auto 84px;
+    .activePage {
+      align-self: flex-start;
+      color: #7c7c89;
+      font-family: Gilroy;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 23.2px;
+      & span {
+        color: #e4a520;
+      }
+    }
     .contentContainer {
       display: grid;
       grid-template-columns: 332px 1fr;
@@ -220,6 +232,28 @@
               line-height: 23.2px;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    & main {
+      width: min(390px, 100vw);
+      height: auto;
+      min-height: 100vh;
+      margin: 76px auto 34px;
+      .contentContainer {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 34px;
+        .leftBlock {
+          width: 301px;
+          gap: 25px;
         }
       }
     }

@@ -12,6 +12,14 @@ import MobileWiki from '@/components/Wiki/MobileWiki'
 
 const inter = Inter({ subsets: ['latin'] })
 
+// import { initDB } from '@/server/models/index';
+
+
+// export const getServerSideProps = async () => {
+//   await initDB()
+//   return {props:{}}
+// };
+
 export default function WikiMain() {
   const [mobileView, setMobileView] = useState(false);
   const [showPaymentModal, setShowPaymentModal] = useState<boolean>(false)
