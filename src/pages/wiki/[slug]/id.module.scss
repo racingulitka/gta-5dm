@@ -13,6 +13,12 @@
     width: min(1920px, 100vw);
     height: auto;
     margin: 0 auto;
+    position:relative;
+    .logo{
+      position:absolute;
+      bottom:0;
+      left:20px;
+    }
   }
   .smallCross1 {
     width: 46px;
@@ -49,7 +55,9 @@
     height: auto;
     min-height: 100vh;
     margin: 92px auto 84px;
+    justify-content: flex-start;
     .activePage {
+      margin: 0 0 17px 0;
       align-self: flex-start;
       color: #7c7c89;
       font-family: Gilroy;
@@ -240,11 +248,18 @@
 
 @media (max-width: 767px) {
   .wrapper {
+    .header{
+      height:44px;
+    }
     & main {
       width: min(390px, 100vw);
       height: auto;
       min-height: 100vh;
       margin: 76px auto 34px;
+      .activePage {
+        margin: 0 auto 14px;
+        width: 301px;
+      }
       .contentContainer {
         display: flex;
         flex-flow: column nowrap;
@@ -254,6 +269,68 @@
         .leftBlock {
           width: 301px;
           gap: 25px;
+          .skinCard {
+            width: 301px;
+            height: 377px;
+            border-radius: 11px;
+            background: rgba(255, 255, 255, 0.02);
+            .icon {
+              width: 239px;
+              height: auto;
+              margin: 70px 0 0 0;
+            }
+            .title {
+              font-size: 25px;
+              line-height: 21px;
+              margin: 44px 0 14px;
+            }
+          }
+          .description {
+            width: 301px;
+            height: auto;
+            border-radius: 11px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 24px;
+            font-size: 14px;
+            line-height: 21px;
+          }
+          .spreadControl {
+            width: 301px;
+            height: 320px;
+            border-radius: 11px;
+            padding: 24px 0 0 24px;
+            gap: 32px;
+            .title {
+              font-size: 18px;
+              line-height: 21px;
+            }
+            .spreadImg {
+              width: 86px;
+            }
+          }
+        }
+        .rightBlock {
+          width:301px;
+          gap: 47px;
+          .title {
+            font-size: 25px;
+            letter-spacing: -0.25px;
+          }
+          .infoBlock {
+            flex-flow: column nowrap;
+            gap: 34px;
+            .content {
+              width: 100%;
+              .title {
+                font-size: 20px;
+                letter-spacing: -0.2px;
+              }
+              .description {
+                font-size: 12px;
+                line-height: 23.2px;
+              }
+            }
+          }
         }
       }
     }

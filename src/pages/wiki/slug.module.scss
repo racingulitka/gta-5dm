@@ -25,6 +25,12 @@
     width: min(1920px, 100vw);
     height: auto;
     margin: 0 auto;
+    position:relative;
+    .logo{
+      position:absolute;
+      bottom:0px;
+      left:20px;
+    }
   }
   .smallCross1 {
     width: 46px;
@@ -256,8 +262,11 @@
 
 @media (max-width: 767px) {
   .wrapper {
+    .header{
+      height:44px;
+    }
     & main {
-      margin: 76px auto 34px;
+      margin: 25px auto 34px;
       .contentContainer {
         width:min(390px, 100vw);
         display: flex;
@@ -265,6 +274,7 @@
         justify-content: flex-start;
         align-items: center;
         gap: 34px;
+        padding: 25px 0 0 0;
         .activePage {
           position: static;
           margin:0 0 0 10px;

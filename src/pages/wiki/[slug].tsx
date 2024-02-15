@@ -13,8 +13,8 @@ import middleCross from './assets/middleCross.svg'
 import bigCross from './assets/bigCross.svg'
 import Link from 'next/link'
 import toTheUpIcon from './assets/toTheUpIcon.svg'
-import { handleNavigation } from '@/utils/handleNavigation'
-import HamburgerMenu from '@/components/common/HamburgerMenu/HamburgerMenu'
+import HamburgerMenuWiki from '@/components/common/HamburgerMenuWiki/HamburgerMenuWiki'
+import logo from './[slug]/assets/logo.svg'
 //import SortSelect from '@/components/common/SortSelect/SortSelect'
 //import { Category } from '@/server/models'
 
@@ -119,10 +119,12 @@ export default function Page(/*{weapons}:{weapons:any[]}*/) {
       <div className={styles.wrapper}>
         <header className={styles.header}>
           {
+            mobileView && <Image src={logo} alt='logo' className={styles.logo} />
+          }
+          {
             mobileView ?
-              <HamburgerMenu
+              <HamburgerMenuWiki
                 getDonat={setShowPaymentModal}
-                handleNavigation={handleNavigation}
               />
               : <WikiHeader getDonat={setShowPaymentModal} />
           }

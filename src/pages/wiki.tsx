@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Footer from '../components/common/Footer/Footer'
 import WikiHeader from '../components/common/WikiHeader/WikiHeader'
-import HamburgerMenu from '@/components/common/HamburgerMenu/HamburgerMenu'
+import HamburgerMenuWiki from '@/components/common/HamburgerMenuWiki/HamburgerMenuWiki'
 import { useState, useEffect } from 'react'
 import PaymentModal from '@/components/common/PaymentModal/PaymentModal'
 import Wiki from '@/components/Wiki/Wiki'
@@ -57,9 +57,8 @@ export default function WikiMain() {
       <header className={styles.header}>
         {
           mobileView ?
-            <HamburgerMenu
+            <HamburgerMenuWiki
               getDonat={setShowPaymentModal}
-              handleNavigation={handleNavigation}
             />
             : <WikiHeader
               getDonat={setShowPaymentModal}

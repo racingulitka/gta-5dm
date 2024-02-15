@@ -5,15 +5,15 @@ import styles from './id.module.scss'
 import mainStyles from '@/styles/Home.module.css'
 import WikiHeader from '../../../components/common/WikiHeader/WikiHeader'
 import Footer from '@/components/common/Footer/Footer'
-import { handleNavigation } from '@/utils/handleNavigation'
 import PaymentModal from '@/components/common/PaymentModal/PaymentModal'
 import Image from 'next/image'
 import smallCross from './assets/smallCross.svg'
 import middleCross from './assets/middleCross.svg'
 import bigCross from './assets/bigCross.svg'
 import BuyButton from '@/components/HowToStart/BuyButton/BuyButton'
-import HamburgerMenu from '@/components/common/HamburgerMenu/HamburgerMenu'
+import HamburgerMenuWiki from '@/components/common/HamburgerMenuWiki/HamburgerMenuWiki'
 import Link from 'next/link'
+import logo from './assets/logo.svg'
 
 export default function Page() {
 
@@ -74,10 +74,12 @@ export default function Page() {
                 {!mobileView && <Image src={bigCross} alt='bigCross' className={styles.bigCross1} />}
                 <header className={styles.header}>
                     {
+                        mobileView && <Image src={logo} alt='logo' className={styles.logo} />
+                    }
+                    {
                         mobileView ?
-                            <HamburgerMenu
+                            <HamburgerMenuWiki
                                 getDonat={setShowPaymentModal}
-                                handleNavigation={handleNavigation}
                             />
                             : <WikiHeader getDonat={setShowPaymentModal} />
                     }
