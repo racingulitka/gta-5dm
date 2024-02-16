@@ -1,7 +1,7 @@
 export const handleNavigation = (sectionId: string) => {
-    const sectionToGo = document.getElementById(sectionId)
+    const sectionToGo = sectionId !== 'wiki' ? document.getElementById(sectionId) : '/wiki'
     window.scrollTo(0, 0)
-    if (sectionToGo) {
+    if (sectionToGo !== null && sectionToGo !== '/wiki') {
       sectionToGo.scrollIntoView({ behavior: 'smooth' })
-    }
+    } else location.href=`${sectionToGo}`
   }

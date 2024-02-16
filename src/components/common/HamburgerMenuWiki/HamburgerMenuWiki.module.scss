@@ -30,6 +30,7 @@
       margin: 0px 0px 6px 0px;
     }
     .menuItem {
+      width:100%;
       color: #eaeaea;
       text-align: center;
       font-family: Gilroy;
@@ -51,7 +52,7 @@
         gap: 13px;
       }
       .subItems {
-        width: auto;
+        width: 100%;
         height: auto;
         display: flex;
         flex-flow: column nowrap;
@@ -82,10 +83,12 @@
             line-height: normal;
             text-transform: none;
           }
+          .titleActive{
+            color:#daaf2d
+          }
         }
         .subItemActive{
           background: #303034;
-          color:#daaf2d
         }
       }
     }

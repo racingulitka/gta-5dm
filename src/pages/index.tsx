@@ -17,11 +17,12 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 import HowToStartMobile from '@/components/mobile/HowToStartMobile/HowToStartMobile'
 import NewsMobile from '@/components/mobile/NewsMobile/NewsMobile'
 import { handleNavigation } from '@/utils/handleNavigation'
+import FAQMobile from '@/components/FAQ/FAQMobile'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  
+
 
   const [mobileView, setMobileView] = useState(false);
   const [showPaymentModal, setShowPaymentModal] = useState<boolean>(false)
@@ -80,7 +81,9 @@ export default function Home() {
             mobileView ? <HowToStartMobile /> : <HowToStart />
           }
           <SocialMedia />
-          <FAQ />
+          {
+            mobileView ? <FAQMobile /> : <FAQ />
+          }
           {
             showPaymentModal &&
             <PaymentModal

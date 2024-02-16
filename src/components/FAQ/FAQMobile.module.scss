@@ -1,0 +1,118 @@
+.wrapper {
+  width: min(1920px, 100vw);
+  height: 1080px;
+  background: radial-gradient(
+      75.83% 75.83% at 50% 50%,
+      rgba(59, 59, 65, 0.25) 0%,
+      rgba(37, 37, 41, 0) 100%
+    ),
+    #0e0e10;
+  position: relative;
+  .smallCross1{
+    width:46px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    top:148px;
+    left:200px;
+  }
+  .smallCross2{
+    width:46px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    top:440px;
+    right:338px;
+  }
+  .smallCross3{
+    width:46px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    top:924px;
+    left:127px;
+  }
+  .mediumCross{
+    width:80px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    mix-blend-mode: overlay;
+    top:114px;
+    right:139px;
+  }
+  .largeCross1{
+    width:150px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    mix-blend-mode: overlay;
+    top:580px;
+    left:246px;
+  }
+  .largeCross2{
+    width:150px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    mix-blend-mode: overlay;
+    top:830px;
+    right:69px;
+  }
+  & main {
+    width: 980px;
+    height: auto;
+    margin: 77px auto 0;
+    & header {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      & h2 {
+        color: #eaeaea;
+        font-family: Gilroy;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .logo {
+        width: 120px;
+        margin-top: 9px;
+      }
+    }
+    .mainFlexContainer {
+      width: 100%;
+      height: 815px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 39px auto 0;
+      & nav {
+        width: 255px;
+        height: auto;
+      }
+      .infoBlock {
+        width: 684px;
+        height: 815px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-y:scroll;
+        scrollbar-width: none;
+
+        & h3 {
+          color: #fff;
+          font-family: Gilroy;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin:0 0 41px 0;
+          width:100%;
+        }
+        .scroller{
+        width:100%;
+        height:calc(815px - 71px);
+        }
+      }
+    }
+  }
+}
