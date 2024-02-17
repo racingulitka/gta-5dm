@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
+import AccordeonMobile from './Accordeon/AccordeonMobile'
 import styles from './FAQMobile.module.scss'
-import Image from 'next/image'
-import logo from './assets/logo.svg'
 import { FAQdatabase } from './FAQ.config';
-import SideMenu from './SideMenu/SideMenu'
-import Accordeon from './Accordeon/Accordeon'
-import smallCross from './assets/smallCross.svg'
-import mediumCross from './assets/mediumCross.svg'
-import largeCross from './assets/LargeCross.svg'
+import cn from 'classnames'
+// import smallCross from './assets/smallCross.svg'
+// import mediumCross from './assets/mediumCross.svg'
+// import largeCross from './assets/LargeCross.svg'
 
 const FAQMobile = () => {
     const navArr = FAQdatabase.map(item => {
@@ -21,39 +19,46 @@ const FAQMobile = () => {
 
     return (
         <div id='faq' className={styles.wrapper}>
-            <Image src={smallCross} alt='smallCross' className={styles.smallCross1} />
+            {/* <Image src={smallCross} alt='smallCross' className={styles.smallCross1} />
             <Image src={smallCross} alt='smallCross' className={styles.smallCross2} />
             <Image src={smallCross} alt='smallCross' className={styles.smallCross3} />
             <Image src={mediumCross} alt='mediumCross' className={styles.mediumCross} />
             <Image src={largeCross} alt='largeCross' className={styles.largeCross1} />
-            <Image src={largeCross} alt='largeCross' className={styles.largeCross2} />
+            <Image src={largeCross} alt='largeCross' className={styles.largeCross2} /> */}
             <main>
                 <header>
                     <h2>Часто спрашивают</h2>
-                    <Image src={logo} alt='logo' className={styles.logo} />
                 </header>
                 <div className={styles.mainFlexContainer}>
                     <nav>
-                        <SideMenu
-                            array={navArr}
-                            activeCategory={activeCategory}
-                            setActiveCategory={setActiveCategory}
-                        />
-                    </nav>
-                    <div className={styles.infoBlock}>
-                        <h3>Какая то категория</h3>
-                        <div className={styles.scroller}>
                         {
-                            activeCategoryArr && activeCategoryArr.questions.map(item => {
-                                return(
-                                    <Accordeon
-                                        key={item.id}
-                                        question={item.question}
-                                        answer={item.answer}
-                                    />
+                            navArr.map(category => {
+                                return (
+                                    <div
+                                        key={category.id}
+                                        className={cn(styles.navCategory, activeCategory === category.id && styles.navCategoryActive)}
+                                        onClick={() => setActiveCategory(category.id)}
+                                    >
+                                        {category.category}
+                                    </div>
                                 )
                             })
                         }
+                    </nav>
+                    <div className={styles.infoBlock}>
+                        <h3>{navArr.find(category => category.id === activeCategory)?.category}</h3>
+                        <div className={styles.scroller}>
+                            {
+                                activeCategoryArr && activeCategoryArr.questions.map(item => {
+                                    return (
+                                        <AccordeonMobile
+                                            key={item.id}
+                                            question={item.question}
+                                            answer={item.answer}
+                                        />
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>

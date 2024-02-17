@@ -50,6 +50,12 @@
         justify-content: flex-start;
         align-items: center;
         gap: 13px;
+        .arrowRight{
+          width:31px;
+        }
+        .arrowRightActive{
+          transform:rotate(90deg);
+        }
       }
       .subItems {
         width: 100%;

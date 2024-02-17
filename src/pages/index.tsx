@@ -70,7 +70,6 @@ export default function Home() {
           }
         </header>
         <main className={`${styles.main} ${inter.className}`}>
-          <About />
           {
             mobileView ? <AdvantagesMobile /> : <Advantages />
           }
@@ -80,6 +79,7 @@ export default function Home() {
           {
             mobileView ? <HowToStartMobile /> : <HowToStart />
           }
+          <About />
           <SocialMedia />
           {
             mobileView ? <FAQMobile /> : <FAQ />

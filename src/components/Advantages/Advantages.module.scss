@@ -52,8 +52,9 @@
   }
   .ak1Image {
     position: absolute;
-    width: 641px;
-    top: 1018px;
+    width: 500px;
+    height:auto;
+    top: 1100px;
     left: 0px;
   }
   .ak2Image {
@@ -105,6 +106,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        margin-bottom:10px;
       }
       .description {
         color: #fff;
@@ -113,6 +115,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 39.2px;
+        text-align: justify;
       }
       .text {
         margin-top: 68px;

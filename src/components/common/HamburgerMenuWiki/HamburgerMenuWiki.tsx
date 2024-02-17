@@ -66,7 +66,7 @@ const HamburgerMenuWiki = ({
                             >
                                 <div className={styles.mainItem}>
                                     <div className={styles.menuTitle}>{item.categoryTitle}</div>
-                                    <Image src={arrowRight} alt='arrowRight' className={styles.arrowRight} />
+                                    <Image src={arrowRight} alt='arrowRight' className={cn(styles.arrowRight, item.categoryId === activeMenuItem && isListVisible && styles.arrowRightActive)} />
                                 </div>
                                 <div className={styles.subItems}>
                                     {isListVisible && activeMenuItem === item.categoryId &&

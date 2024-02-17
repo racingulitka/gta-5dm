@@ -32,7 +32,7 @@ const Advantages = () => {
             <div
                 className={styles.mainTitle}
             >
-                Преимущества
+                Игровые режимы
             </div>
             {
                 advantageArr.map(item => {

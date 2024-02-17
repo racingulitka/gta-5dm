@@ -94,6 +94,9 @@
   }
 }
 @media (max-width:767px){
+  .wrapper{
+    overflow:hidden;
+  }
   .wrapper .title{
     font-size: 30px;
     margin:41px auto 30px;
@@ -133,6 +136,9 @@
     position:absolute;
     top:51%;
     left:0px;
+  }
+  .wrapper .baseballImage{
+    display:none;
   }
   .wrapper .ak2Image{
     display:block;
