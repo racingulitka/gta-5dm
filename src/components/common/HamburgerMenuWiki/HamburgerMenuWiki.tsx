@@ -45,7 +45,7 @@ const HamburgerMenuWiki = ({
     }, [router.query.slug])
 
     return (
-        <div className={cn(styles.wrapper, isActive && styles.wrapperActive)}>
+        <div className={cn(styles.wrapper, isActive && styles.wrapperActive)} itemScope itemType="http://schema.org/SiteNavigationElement" >
             <Image
                 src={hamburgerIcon}
                 alt='hamburgerIcon'
@@ -54,15 +54,16 @@ const HamburgerMenuWiki = ({
                 className={styles.hamburgerIcon}
                 onClick={() => setActive(prev => !prev)}
             />
-            <div className={cn(styles.menuWrapper, isActive && styles.menuWrapperActive)}>
+            <div className={cn(styles.menuWrapper, isActive && styles.menuWrapperActive)} itemScope itemType="http://schema.org/ItemList" >
                 <Image src={logo} alt='logo' className={styles.logo} />
                 {
                     wikiArr.map(item => {
                         return (
-                            <div
+                            <nav
                                 key={item.categoryId}
                                 className={cn(styles.menuItem, item.categoryId === activeMenuItem && styles.menuItemActive)}
                                 onClick={() => onClick(item.categoryId)}
+                                itemProp="name"
                             >
                                 <div className={styles.mainItem}>
                                     <div className={styles.menuTitle}>{item.categoryTitle}</div>
@@ -77,17 +78,18 @@ const HamburgerMenuWiki = ({
                                                     onClick={(event) => handleWeaponSelect(event)}
                                                     href={`/wiki/${weapon.title}`}
                                                     style={{width:'100%'}}
+                                                    itemProp="url"
                                                 >
-                                                    <div className={cn(styles.subItem, weapon.title === activeWeapon && styles.subItemActive)}>
-                                                        <Image src={weapon.icon} alt='icon' className={styles.icon} />
-                                                        <div className={cn(styles.title, weapon.title === activeWeapon && styles.titleActive)}>{weapon.title}</div>
+                                                    <div className={cn(styles.subItem, weapon.title === activeWeapon && styles.subItemActive)} itemScope itemType="http://schema.org/ListItem" >
+                                                        <Image src={weapon.icon} alt='icon' className={styles.icon} itemProp="image"/>
+                                                        <div className={cn(styles.title, weapon.title === activeWeapon && styles.titleActive)} itemProp="name">{weapon.title}</div>
                                                     </div>
                                                 </Link>
                                             )
                                         })
                                     }
                                 </div>
-                            </div>
+                            </nav>
                         )
                     })
                 }

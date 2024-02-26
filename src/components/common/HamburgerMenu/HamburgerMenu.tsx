@@ -25,7 +25,7 @@ const HamburgerMenu = ({
     }
 
     return (
-        <div className={cn(styles.wrapper, isActive && styles.wrapperActive)}>
+        <nav className={cn(styles.wrapper, isActive && styles.wrapperActive)} itemScope itemType="http://schema.org/SiteNavigationElement" >
             <Image
                 src={hamburgerIcon}
                 alt='hamburgerIcon'
@@ -34,7 +34,7 @@ const HamburgerMenu = ({
                 className={styles.hamburgerIcon}
                 onClick={() => setActive(prev => !prev)}
             />
-            <div className={cn(styles.menuWrapper, isActive && styles.menuWrapperActive)}>
+            <div className={cn(styles.menuWrapper, isActive && styles.menuWrapperActive)} itemScope itemType="http://schema.org/ItemList" >
                 {
                     menuItems.map(item => {
                         return (
@@ -42,6 +42,7 @@ const HamburgerMenu = ({
                                 key={item.id}
                                 className={cn(styles.menuItem, item.id === activeMenuItem && styles.menuItemActive)}
                                 onClick={() => onClick(item.id)}
+                                itemProp="name"
                             >
                                 {item.title}
                             </div>
@@ -50,7 +51,7 @@ const HamburgerMenu = ({
                 }
                 <DonatButton getDonat={getDonat} />
             </div>
-        </div>
+        </nav>
     )
 }
 

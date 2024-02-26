@@ -13,29 +13,30 @@ import ak2Image from './assets/ak2Image.png'
 
 const AdvantagesMobile = () => {
     return(
-        <div id='advantages' className={styles.wrapper}>
-            <Image src={baseballImage} alt='baseballImage' className={styles.baseballImage} />
-            <Image src={topRightCrossImage} alt='topRightCrossImage' className={styles.topRightCrossImage} />
-            <Image src={bottomLeftCrossImage} alt='bottomLeftCrossImage' className={styles.bottomLeftCrossImage} />
-            <Image src={smallCrossImage} alt="smallCrossImage" className={styles.smallCrossImageFirst} />
-            <Image src={smallCrossImage} alt="smallCrossImage" className={styles.smallCrossImageSecond} />
-            <Image src={gunImage} alt="gunImage" className={styles.gunImage} />
-            <Image src={ak1Image} alt="ak1Image" className={styles.ak1Image} />
-            <Image src={ak2Image} alt="ak2Image" className={styles.ak2Image} />
-            <div className={styles.mainTitle}>Преимущества</div>
+        <div id='advantages' className={styles.wrapper} itemScope itemType="http://schema.org/WebPage">
+            <Image src={baseballImage} alt='baseballImage' className={styles.baseballImage} itemScope itemType="http://schema.org/ImageObject"/>
+            <Image src={topRightCrossImage} alt='topRightCrossImage' className={styles.topRightCrossImage} itemScope itemType="http://schema.org/ImageObject"/>
+            <Image src={bottomLeftCrossImage} alt='bottomLeftCrossImage' className={styles.bottomLeftCrossImage} itemScope itemType="http://schema.org/ImageObject"/>
+            <Image src={smallCrossImage} alt="smallCrossImage" className={styles.smallCrossImageFirst} itemScope itemType="http://schema.org/ImageObject"/>
+            <Image src={smallCrossImage} alt="smallCrossImage" className={styles.smallCrossImageSecond} itemScope itemType="http://schema.org/ImageObject"/>
+            <Image src={gunImage} alt="gunImage" className={styles.gunImage} itemScope itemType="http://schema.org/ImageObject"/>
+            <Image src={ak1Image} alt="ak1Image" className={styles.ak1Image} itemScope itemType="http://schema.org/ImageObject"/>
+            <Image src={ak2Image} alt="ak2Image" className={styles.ak2Image} itemScope itemType="http://schema.org/ImageObject"/>
+            <div className={styles.mainTitle} itemScope itemType="http://schema.org/Text">Преимущества</div>
             {
                 advantageArr.map(item => {
                     return(
                         <div
                             key={item.id}
                             className={cn(styles.flexContainer)}
+                            itemScope itemType="http://schema.org/ListItem"
                         >
                             <div className={styles.imageBlock}>
-                                <Image src={item.image} alt='image' className={styles.image} />
+                                <Image src={item.image} alt='image' className={styles.image} itemScope itemType="http://schema.org/ImageObject"/>
                             </div>
                             <div className={styles.infoBlock}>
-                                <div className={styles.title}>{item.title}</div>
-                                <div className={styles.description}>{item.description}</div>
+                                <div className={styles.title} itemScope itemType="http://schema.org/Text">{item.title}</div>
+                                <div className={styles.description} itemScope itemType="http://schema.org/Text">{item.description}</div>
                             </div> 
                         </div>
                     )

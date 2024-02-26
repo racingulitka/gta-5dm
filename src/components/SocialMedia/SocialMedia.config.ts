@@ -6,17 +6,17 @@ import instagramIcon from './assets/instagramIcon.png'
 import vkIcon from './assets/vkIcon.png'
 
 export const mediaButtonsArr = [
-    {
-        id:1,
-        name: 'discord channel',
-        icon:discordIcon,
-        iconBorder:'6px solid rgba(114, 137, 218, 0.5)',
-        iconBoxShadow:'0px 0px 47.033px 0px rgba(114, 137, 218, 0.55)',
-        color:'#7289DA',
-        textShadow:'0px 4px 35px #7289DA',
-        textBackground:'',
-        link:'',
-    },
+    // {
+    //     id:1,
+    //     name: 'discord channel',
+    //     icon:discordIcon,
+    //     iconBorder:'6px solid rgba(114, 137, 218, 0.5)',
+    //     iconBoxShadow:'0px 0px 47.033px 0px rgba(114, 137, 218, 0.55)',
+    //     color:'#7289DA',
+    //     textShadow:'0px 4px 35px #7289DA',
+    //     textBackground:'',
+    //     link:'',
+    // },
     {
         id:2,
         name: 'youtube channel',
@@ -39,17 +39,17 @@ export const mediaButtonsArr = [
         textBackground: 'linear-gradient(90deg, #FFF 15.58%, #3C3C3C 190.26%)',
         link:'https://www.tiktok.com/@gta5dm',
     },
-    {
-        id:4,
-        name: 'telegram channel',
-        icon:telegramIcon,
-        iconBorder:'6px solid rgba(125, 208, 255, 0.5)',
-        iconBoxShadow:'0px 0px 47.033px 0px rgba(125, 208, 255, 0.55)',
-        color:'#7DD0FF',
-        textShadow:'0px 4px 35px #7DD0FF',
-        textBackground:'',
-        link:'',
-    },
+    // {
+    //     id:4,
+    //     name: 'telegram channel',
+    //     icon:telegramIcon,
+    //     iconBorder:'6px solid rgba(125, 208, 255, 0.5)',
+    //     iconBoxShadow:'0px 0px 47.033px 0px rgba(125, 208, 255, 0.55)',
+    //     color:'#7DD0FF',
+    //     textShadow:'0px 4px 35px #7DD0FF',
+    //     textBackground:'',
+    //     link:'',
+    // },
     {
         id:5,
         name: 'instagram',

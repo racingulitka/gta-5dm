@@ -20,7 +20,7 @@ const FAQ = () => {
     const activeCategoryArr = FAQdatabase.find(item => item.id === activeCategory)
 
     return (
-        <div id='faq' className={styles.wrapper}>
+        <div itemScope itemType="https://schema.org/FAQPage" id='faq' className={styles.wrapper}>
             <Image src={smallCross} alt='smallCross' className={styles.smallCross1} />
             <Image src={smallCross} alt='smallCross' className={styles.smallCross2} />
             <Image src={smallCross} alt='smallCross' className={styles.smallCross3} />

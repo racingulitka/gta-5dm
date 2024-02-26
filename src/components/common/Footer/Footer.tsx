@@ -15,13 +15,13 @@ const Footer = () => {
     const payArr = [oiPay, mirPay, mastercardPay, applePay, samsungPay, googlePay, visaPay]
 
     return(
-        <div className={styles.wrapper}>
-            <Image src={logo} alt='logo' className={styles.logo} />
+        <div className={styles.wrapper} itemScope itemType="http://schema.org/Organization">
+            <Image src={logo} alt='logo' className={styles.logo} itemScope itemType="http://schema.org/ImageObject"/>
             <div className={styles.secondBlock}>
-                <div className={styles.brightText}>
+                <div className={styles.brightText} itemProp="description">
                 GTA 5 DM is not affiliated with or endorsed by Take-Two, Rockstar North Interactive, or any other rights holder. All the used trademarks belong to their respective owners.
                 </div>
-                <div className={styles.text}>
+                <div className={styles.text} itemProp="address">
                 Professional Gaming Solutions Limited (13565439) UK, London, Palliser House, Palliser Road, W149EB
                 </div>
             </div>
@@ -53,7 +53,7 @@ const Footer = () => {
                 </div>
             </div>
             </div>
-            <div className={styles.paySystems}>
+            <div className={styles.paySystems} itemScope itemType="http://schema.org/PaymentMethod">
                 {
                     payArr.map(item => {
                         return(

@@ -25,10 +25,10 @@ const Header = ({
     }
 
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} itemScope itemType="http://schema.org/WPHeader">
             <div className={styles.header}>
                 <Image src={logo} alt='logo' className={styles.logo} />
-                <div className={styles.menu}>
+                <nav className={styles.menu} itemScope itemType="http://schema.org/SiteNavigationElement">
                     {
                         menuItems.map(item => {
                             return (
@@ -36,6 +36,7 @@ const Header = ({
                                     <div
                                         className={cn(styles.menuItem, item.id === activeItem && styles.menuItemActive)}
                                         onClick={() => onClick(item.id)}
+                                        itemProp="name"
                                     >
                                         {item.title}
                                     </div>
@@ -43,7 +44,7 @@ const Header = ({
                             )
                         })
                     }
-                </div>
+                </nav>
                 <ServerBlock />
                 <DonatButton getDonat={getDonat} />
             </div>

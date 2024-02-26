@@ -20,7 +20,9 @@ const Advantages = () => {
     });
 
     return (
-        <div id='advantages' className={styles.wrapper}>
+        <div id='advantages' className={styles.wrapper} itemScope itemType="http://schema.org/WebPage">
+            <meta itemProp="name" content="Advantages Section" />
+            <meta itemProp="description" content="Секция с игровыми режимами на сервере GTA5DM." />
             <Image src={baseballImage} alt='baseballImage' className={styles.baseballImage} />
             <Image src={topRightCrossImage} alt='topRightCrossImage' className={styles.topRightCrossImage} />
             <Image src={bottomLeftCrossImage} alt='bottomLeftCrossImage' className={styles.bottomLeftCrossImage} />
@@ -29,11 +31,12 @@ const Advantages = () => {
             <Image src={gunImage} alt="gunImage" className={styles.gunImage} />
             <Image src={ak1Image} alt="ak1Image" className={styles.ak1Image} />
             <Image src={ak2Image} alt="ak2Image" className={styles.ak2Image} />
-            <div
+            <h1
                 className={styles.mainTitle}
+                itemProp="headline"
             >
                 Игровые режимы
-            </div>
+            </h1>
             {
                 advantageArr.map(item => {
                     return (
@@ -49,8 +52,8 @@ const Advantages = () => {
                                     speed={item.id !== 2 ? 0 : 5}
                                     translateX={item.id !== 2 ? [-8, 0] : [8, 0]}
                                     opacity={[0, 1]}
-                                    easing={[.36,.72,.48,1.03]}
-                                    //easing={[0, 2, 0.5, -2]}
+                                    easing={[.36, .72, .48, 1.03]}
+                                //easing={[0, 2, 0.5, -2]}
 
                                 >
                                     <Image src={item.image} alt='image' className={styles.image} />
@@ -60,14 +63,14 @@ const Advantages = () => {
                                 speed={item.id !== 2 ? 5 : 0}
                                 translateX={item.id !== 2 ? [8, 0] : [-8, 0]}
                                 opacity={[0, 1]}
-                                easing={[.36,.72,.48,1.03]}
+                                easing={[.36, .72, .48, 1.03]}
                                 //easing={[0, 2, 0.5, -2]}
                                 className={styles.infoBlock}
 
                             >
-                                <div className={styles.title}>{item.title}</div>
-                                <div className={styles.description}>{item.description}</div>
-                                <div className={styles.text}>{item.text}</div>
+                                <div className={styles.title} itemProp="name" >{item.title}</div>
+                                <div className={styles.description} itemProp="description" >{item.description}</div>
+                                <div className={styles.text} itemProp="text" >{item.text}</div>
                             </Parallax>
                         </div>
                     )

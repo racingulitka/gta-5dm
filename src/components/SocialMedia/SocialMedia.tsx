@@ -11,7 +11,7 @@ import vkBackground from './assets/vkBackground.png'
 
 const SocialMedia = () => {
     return (
-        <div id='socialMedia' className={styles.wrapper}>
+        <div id='socialMedia' className={styles.wrapper} itemScope itemType="http://schema.org/Organization">
             <div className={styles.tiktokBackgroundBlock}>
                 <div className={styles.tiktokBackgroundCover}></div>
                 <Image src={tiktokBackground} alt='tiktokBackground' className={styles.tiktokBackground} />
@@ -28,9 +28,9 @@ const SocialMedia = () => {
                 <div className={styles.vkBackgroundCover}></div>
                 <Image src={vkBackground} alt='vkBackground' className={styles.vkBackground} />
             </div>
-            <div className={styles.content}>
-                <h2 className={styles.title}>Следи за нами и получайте ценные призы!</h2>
-                <p className={styles.description}>В наших соц сетях мы часто публикуем промокоды, проводим конкурсы. разыгрываем подарки, и многое другое.</p>
+            <div className={styles.content} itemScope itemType="http://schema.org/WebPage">
+                <h2 className={styles.title} itemProp="name">Следи за нами и получайте ценные призы!</h2>
+                <p className={styles.description} itemProp="description">В наших соц сетях мы часто публикуем промокоды, проводим конкурсы. разыгрываем подарки, и многое другое.</p>
                 <div className={styles.flexContainer}>
                     {
                         mediaButtonsArr.map(item => {

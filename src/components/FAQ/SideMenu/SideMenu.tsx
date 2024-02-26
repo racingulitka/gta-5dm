@@ -13,7 +13,7 @@ const SideMenu = ({
     setActiveCategory:React.Dispatch<React.SetStateAction<number>>,
 }) => {
     return (
-        <div className={styles.wrapper}>
+        <aside className={styles.wrapper}>
             {
                 array.map(item => {
                     return (
@@ -28,7 +28,7 @@ const SideMenu = ({
                     )
                 })
             }
-        </div>
+        </aside>
     )
 }
 

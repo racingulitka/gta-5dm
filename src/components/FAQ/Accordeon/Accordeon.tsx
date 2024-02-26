@@ -1,18 +1,23 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styles from './Accordeon.module.scss'
 import cn from 'classnames'
 
 const Accordeon = ({
     question,
     answer,
-}:{
-    question:string,
-    answer:string,
+}: {
+    question: string,
+    answer: string,
 }) => {
     const [isActive, setActive] = useState<boolean>(false)
-    return(
+    return (
         <div className={cn(styles.wrapper, isActive && styles.wrapperActive)}>
-            <div className={styles.question}>
+            <div
+                itemScope
+                itemProp='mainEntity'
+                itemType='https://schema.org/Question'
+                className={styles.question}
+            >
                 <div className={cn(styles.titleInactive, isActive && styles.titleActive)}>{question}</div>
                 <div
                     className={cn(styles.buttonInactive, isActive && styles.buttonActive)}
@@ -22,7 +27,12 @@ const Accordeon = ({
                     <div className={cn(styles.stick2Inactive, isActive && styles.stick2Active)}></div>
                 </div>
             </div>
-            <div className={cn(styles.answerInactive, isActive && styles.answerActive)}>
+            <div
+                itemScope
+                itemProp="acceptedAnswer"
+                itemType="https://schema.org/Answer"
+                className={cn(styles.answerInactive, isActive && styles.answerActive)}
+            >
                 {answer}
             </div>
         </div>

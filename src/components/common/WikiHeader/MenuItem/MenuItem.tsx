@@ -37,21 +37,25 @@ const MenuItem = ({
         <div
             className={styles.wrapper}
             onClick={() => handleClick()}
+            itemScope
+            itemType="http://schema.org/MenuItem"
         >
-            <div className={cn(styles.title, arr.categoryId === activeItem && styles.titleActive)}>{arr.categoryTitle}</div>
+            <div className={cn(styles.title, arr.categoryId === activeItem && styles.titleActive)} itemProp="name">{arr.categoryTitle}</div>
             <Image src={openIcon} alt='openIcon' className={cn(styles.openIcon, arr.categoryId === activeItem && styles.openIconActive)} />
             <div className={cn(styles.menuSelect, arr.categoryId === activeItem && styles.menuSelectActive)}>
                 {
-                    arr.categoryId === activeItem && arr.categoryArr && arr.categoryArr.map(item => {
+                    arr.categoryId === activeItem && arr.categoryArr && arr.categoryArr.map((item:any) => {
                         return (
                             <Link
                                 key={item.id}
                                 href={`/wiki/${item.title}`}
                                 onClick={() => onItemClick(item.id)}
+                                itemScope
+                                itemType="http://schema.org/ItemList"
                             >
-                                <div className={styles.weapon} >
+                                <div className={styles.weapon} itemScope itemType="http://schema.org/Weapon">
                                     <Image src={item.icon} alt='icon' className={styles.icon} />
-                                    <div className={cn(styles.title, activeCategoryId === arr.categoryId && selectedWeapon === item.id && styles.titleActive)}>{item.title}</div>
+                                    <div className={cn(styles.title, activeCategoryId === arr.categoryId && selectedWeapon === item.id && styles.titleActive)} itemProp="name">{item.title}</div>
                                 </div>
                             </Link>
                         )

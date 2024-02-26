@@ -36,30 +36,34 @@ const MediaButton = ({
 
     return (
         <Link href={link} target="_blank">
-            <div className={styles.wrapper}>
+            <div className={styles.wrapper} itemScope itemType="http://schema.org/Organization">
                 <div className={styles.flexContainer}>
                     <div className={styles.iconContainer}>
                         <div className={styles.background} style={{ border: iconBorder, boxShadow: iconBoxShadow }}>
-                            <Image src={icon} alt='image' className={styles.icon} style={{ transform: `translate(0, ${iconAlign})` }} />
+                            <Image src={icon} alt='image' className={styles.icon} style={{ transform: `translate(0, ${iconAlign})` }} itemProp="logo" />
                         </div>
                     </div>
-                    <div className={styles.textBlock}>
+                    <div className={styles.textBlock} itemScope itemType="http://schema.org/SocialMediaPosting">
                         {
                             color === '' ?
                                 <div
                                     style={{ backgroundImage: textBackground, textShadow }}
                                     className={cn(styles.name, styles.nameBack)}
+                                    itemProp="headline"
                                 >
                                     {name.toUpperCase()}
                                 </div> :
                                 <div
                                     className={cn(styles.name)}
                                     style={{ color, textShadow }}
+                                    itemProp="headline"
                                 >
                                     {name.toUpperCase()}
                                 </div>
                         }
-                        <div className={styles.followers}>{followers} <span>подписчиков</span></div>
+                        <div className={styles.followers} itemProp="interactionStatistic" itemScope itemType="http://schema.org/InteractionCounter">{followers}
+                            <span itemProp="userInteractionCount">подписчиков</span>
+                        </div>
                     </div>
                 </div>
             </div>
