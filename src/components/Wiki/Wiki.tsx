@@ -7,15 +7,15 @@ import Image from 'next/image';
 
 import crossBlurSmall from './assets/crossBlurSmall.svg'
 import crossSharpSmall from './assets/crossSharpSmall.svg'
-import ak1 from './assets/ak1.png'
-import ak2 from './assets/ak2.png'
-import ak3 from './assets/ak3.png'
-import ak4 from './assets/ak4.png'
+import ak1 from './assets/ak1.webp'
+import ak2 from './assets/ak2.webp'
+import ak3 from './assets/ak3.webp'
+import ak4 from './assets/ak4.webp'
 import crossBlurLarge from './assets/crossBlurLarge.svg'
-import baseball1 from './assets/baseball1.png'
-import baseball2 from './assets/baseball2.png'
-import gun1 from './assets/gun1.png'
-import gun2 from './assets/gun2.png'
+import baseball1 from './assets/baseball1.webp'
+import baseball2 from './assets/baseball2.webp'
+import gun1 from './assets/gun1.webp'
+import gun2 from './assets/gun2.webp'
 import crossSharpLarge from './assets/crossSharpLarge.svg'
 
 export default function Wiki() {

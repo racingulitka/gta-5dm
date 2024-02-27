@@ -1,4 +1,4 @@
-import defaultAdvantagesImage from './assets/defaultAdvantagesImage.png'
+import defaultAdvantagesImage from './assets/defaultAdvantagesImage.webp'
 
 export const advantageArr = [
     {

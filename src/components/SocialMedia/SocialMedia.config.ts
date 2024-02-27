@@ -1,9 +1,9 @@
-import discordIcon from './assets/discordIcon.png'
-import youtubeIcon from './assets/youtubeIcon.png'
-import tiktokIcon from './assets/tiktokIcon.png'
-import telegramIcon from './assets/telegramIcon.png'
-import instagramIcon from './assets/instagramIcon.png'
-import vkIcon from './assets/vkIcon.png'
+import discordIcon from './assets/discordIcon.webp'
+import youtubeIcon from './assets/youtubeIcon.webp'
+import tiktokIcon from './assets/tiktokIcon.webp'
+import telegramIcon from './assets/telegramIcon.webp'
+import instagramIcon from './assets/instagramIcon.webp'
+import vkIcon from './assets/vkIcon.webp'
 
 export const mediaButtonsArr = [
     // {

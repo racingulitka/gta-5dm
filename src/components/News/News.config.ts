@@ -1,7 +1,7 @@
-import defaultImage1 from './assets/defaultImage1.png'
-import defaultImage2 from './assets/defaultImage2.png'
-import defaultImage3 from './assets/defaultImage3.png'
-import defaultImage5 from './assets/defaultImage5.png'
+import defaultImage1 from './assets/defaultImage1.webp'
+import defaultImage2 from './assets/defaultImage2.webp'
+import defaultImage3 from './assets/defaultImage3.webp'
+import defaultImage5 from './assets/defaultImage5.webp'
 
 export const newsArr = [
     {

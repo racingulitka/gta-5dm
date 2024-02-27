@@ -55,7 +55,7 @@ export default function Home() {
           <title itemProp='headline'>GTA 5 DM: DM сервер GTA 5 с рейтинговым режимом! | gta5dm.pro</title>
           <meta itemProp='description' name="description" content="GTA 5 DM - это гта 5 дм сервер, на которым ты сможешь показать всем свой скил стрельбы!, Проект сделан на базе игры GTA 5, платформа RAGE MP . У нас ты найдешь такие режимы как: Рейтинговые матчи, Ghetto Gangwars и другие. Присоединяйся к нам и покажи кто тут хозяин гетто!" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="keywords" content='' />
+          <meta name="keywords" content='gta 5 dm, dm server gta 5, дм сервера гта 5, dm в гта 5l' />
           <link rel="icon" href="/favicon.ico" />
           <link rel='stylesheet' href='index.css' />
           <link rel="alternate" hrefLang="ru" href="https://www.yourwebsite.com/" />

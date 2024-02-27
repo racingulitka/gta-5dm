@@ -4,11 +4,11 @@ import { newsArr } from '@/components/News/News.config'
 import Image from 'next/image'
 import DetailsButton from '@/components/News/Details/DetailsButton'
 import cn from 'classnames'
-import gunImage from './assets/gunImage.png'
-import gunSmallImage from './assets/gunSmallImage.png'
-import baseballImage from './assets/baseballImage.png'
-import akImage from './assets/akImage.png'
-import ak2Image from './assets/ak2Image.png'
+import gunImage from './assets/gunImage.webp'
+import gunSmallImage from './assets/gunSmallImage.webp'
+import baseballImage from './assets/baseballImage.webp'
+import akImage from './assets/akImage.webp'
+import ak2Image from './assets/ak2Image.webp'
 
 const NewsMobile = () => {
     return (

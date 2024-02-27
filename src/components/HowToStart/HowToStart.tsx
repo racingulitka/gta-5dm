@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './HowToStart.module.scss'
 import { cardArr } from './HowToStart.config'
 import HTPCard from './HTPCard/HTPCard'
-import logo from './assets/logo.png'
+import logo from './assets/logo.webp'
 import Image from 'next/image'
 
 const HowToStart = () => {

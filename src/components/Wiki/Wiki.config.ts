@@ -1,5 +1,6 @@
-import defaultWeaponImage from "./assets/defaultWeaponImage.png";
+import defaultWeaponImage from "./assets/defaultWeaponImage.webp";
 import defaultSpreadControlImage from "./assets/defaultSpreadControl.svg";
+//Это если будет в таблицах mySQL
 // const object = {
 //   id: 1,
 //   title: "Бабочка",

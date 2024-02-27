@@ -15,6 +15,7 @@ import Link from 'next/link'
 import toTheUpIcon from './assets/toTheUpIcon.svg'
 import HamburgerMenuWiki from '@/components/common/HamburgerMenuWiki/HamburgerMenuWiki'
 import logo from './[slug]/assets/logo.svg'
+import Head from 'next/head'
 //import SortSelect from '@/components/common/SortSelect/SortSelect'
 //import { Category } from '@/server/models'
 
@@ -116,6 +117,16 @@ export default function Page(/*{weapons}:{weapons:any[]}*/) {
 
   return (
     <>
+      <Head>
+        <meta itemScope={true} itemType="http://schema.org/Header" />
+        <title itemProp='headline'>Wiki</title>
+        <meta itemProp='description' name=" description" content="gta 5 dm wiki" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="gta 5 dm, dm server gta 5, дм сервера гта 5, dm в гта 5" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel='stylesheet' href='index.css' />
+        <link rel="alternate" hrefLang="ru" href="https://www.yourwebsite.com/" />
+      </Head>
       <div className={styles.wrapper}>
         <header className={styles.header}>
           {

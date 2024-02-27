@@ -1,4 +1,4 @@
-import defaultHTPCardImage from './assets/defaultHTPCardImage.png'
+import defaultHTPCardImage from './assets/defaultHTPCardImage.webp'
 
 export const cardArr = [
     {

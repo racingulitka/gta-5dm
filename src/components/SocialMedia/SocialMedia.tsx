@@ -4,10 +4,10 @@ import Image from 'next/image'
 import MediaButton from './MediaButton/MediaButton'
 import { mediaButtonsArr } from './SocialMedia.config';
 
-import tiktokBackground from './assets/tiktokBackground.png'
-import youtubeBackground from './assets/youtubeBackground.png'
-import telegramBackground from './assets/telegramBackground.png'
-import vkBackground from './assets/vkBackground.png'
+import tiktokBackground from './assets/tiktokBackground.webp'
+import youtubeBackground from './assets/youtubeBackground.webp'
+import telegramBackground from './assets/telegramBackground.webp'
+import vkBackground from './assets/vkBackground.webp'
 
 const SocialMedia = () => {
     return (
