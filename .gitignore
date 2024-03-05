@@ -37,3 +37,7 @@ next-env.d.ts
 
 # webstorm
 .idea
+
+# certs
+*.key
+*.crt
