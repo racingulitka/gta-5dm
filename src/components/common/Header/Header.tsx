@@ -27,7 +27,7 @@ const Header = ({
     return (
         <div className={styles.wrapper} itemScope itemType="http://schema.org/WPHeader">
             <div className={styles.header}>
-                <Image src={logo} alt='logo' className={styles.logo} />
+                <Link href='/'><Image src={logo} alt='logo' className={styles.logo} /></Link>
                 <nav className={styles.menu} itemScope itemType="http://schema.org/SiteNavigationElement">
                     {
                         menuItems.map(item => {

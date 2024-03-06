@@ -6,6 +6,7 @@ import DonatButton from '../Header/DonatButton/DonatButton'
 import ServerBlock from './ServerBlock/ServerBlock'
 import MenuItem from './MenuItem/MenuItem'
 import { wikiArr } from '../../Wiki/Wiki.config'
+import Link from 'next/link'
 
 const Header = ({
     getDonat,
@@ -24,7 +25,7 @@ const Header = ({
     return (
         <div className={styles.wrapper} itemScope itemType="http://schema.org/WPHeader">
             <div className={styles.header}>
-                <Image src={logo} alt='logo' className={styles.logo} />
+                <Link href='/'><Image src={logo} alt='logo' className={styles.logo} /></Link>
                 <nav className={styles.menu} itemScope itemType="http://schema.org/SiteNavigationElement">
                     {
                         wikiArr.map(item => {

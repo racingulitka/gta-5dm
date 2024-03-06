@@ -53,13 +53,13 @@ const News = () => {
                             </div>
                         </motion.div>
                         <motion.div className={styles.image} initial={{ opacity: 0, transform: 'translate(0, 30px)' }} animate={{ opacity: 1, transform: 'translate(0, 0)' }} transition={{ duration: stepDuration, delay: step2Delay }}>
-                            <Image src={newsArr[0].image} alt='defaultImage' itemProp="image" />
+                            <Image src={newsArr[0].image} alt='defaultImage' className={styles.img} itemProp="image" />
                         </motion.div>
                     </article>
                 </motion.div>
             }
             {isVisible &&
-                <motion.div className={styles.bottomBlock} initial={{ width: 0 }} animate={{ width: 1191 }} transition={{ duration: stepDuration, delay: step1Delay }}>
+                <motion.div className={styles.bottomBlock} initial={{ width: 0 }} animate={{ width: '65%' }} transition={{ duration: stepDuration, delay: step1Delay }}>
                     <article className={styles.layoutBlock}>
                         <motion.div className={styles.infoBlock} initial={{ opacity: 0, transform: 'translate(0, 30px)' }} animate={{ opacity: 1, transform: 'translate(0, 0)' }} transition={{ duration: stepDuration, delay: step2Delay }}>
                             <div className={styles.title} itemProp="headline">{newsArr[3].title}</div>
@@ -70,7 +70,7 @@ const News = () => {
                             </div>
                         </motion.div>
                     </article>
-                    <motion.div className={styles.bottomRightBlock} initial={{ width: 0 }} animate={{ width: 729 }} transition={{ duration: stepDuration, delay: step3Delay }}>
+                    <motion.div className={styles.bottomRightBlock} initial={{ width: 0 }} animate={{ width: '65%' }} transition={{ duration: stepDuration, delay: step3Delay }}>
                         <article className={styles.layoutBlock}>
                             <motion.div className={styles.infoBlock} initial={{ opacity: 0, transform: 'translate(0, 30px)' }} animate={{ opacity: 1, transform: 'translate(0, 0)' }} transition={{ duration: stepDuration, delay: step4Delay }}>
                                 <div className={styles.title} itemProp="headline">{newsArr[4].title}</div>
