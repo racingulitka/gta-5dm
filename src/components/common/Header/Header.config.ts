@@ -21,14 +21,14 @@ export const menuItems = [
         title:'FAQ',
         name:'faq'
     },
-    {
-        id:MenuItems.forum,
-        title:'Форум',
-        name:'forum'
-    },
-    {
-        id:MenuItems.wiki,
-        title:'Wiki',
-        name:'wiki'
-    },
+    // {
+    //     id:MenuItems.forum,
+    //     title:'Форум',
+    //     name:'forum'
+    // },
+    // {
+    //     id:MenuItems.wiki,
+    //     title:'Wiki',
+    //     name:'wiki'
+    // },
 ]
