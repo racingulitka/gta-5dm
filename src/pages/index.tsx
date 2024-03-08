@@ -18,30 +18,15 @@ import HowToStartMobile from '@/components/mobile/HowToStartMobile/HowToStartMob
 import NewsMobile from '@/components/mobile/NewsMobile/NewsMobile'
 import { handleNavigation } from '@/utils/handleNavigation'
 import FAQMobile from '@/components/FAQ/FAQMobile'
+import useIsMobile from '@/utils/useIsMobile'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
 
 
-  const [mobileView, setMobileView] = useState(false);
+  const mobileView = useIsMobile()
   const [showPaymentModal, setShowPaymentModal] = useState<boolean>(false)
-  useEffect(() => {
-    const updateMobileView = () => {
-      setMobileView(window.innerWidth < 767);
-    };
-
-    // Вызовем updateMobileView при монтировании компонента
-    updateMobileView();
-
-    // Добавим слушатель события resize, чтобы обновлять mobileView при изменении размеров окна
-    window.addEventListener('resize', updateMobileView);
-
-    // Удалим слушатель при размонтировании компонента
-    return () => {
-      window.removeEventListener('resize', updateMobileView);
-    };
-  }, [])
 
   const onRequestClose = () => {
     setShowPaymentModal(false)
