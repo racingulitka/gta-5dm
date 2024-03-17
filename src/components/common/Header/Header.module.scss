@@ -1,9 +1,8 @@
 .wrapper {
-  width: min(1920px, 100%);
+  width: min(1920px, 99vw);
   height: auto;
   margin: 0 auto;
   background: #0e0e10;
-  //flex-basis:1920px;
   .header {
     width: 100%;
     height: auto;

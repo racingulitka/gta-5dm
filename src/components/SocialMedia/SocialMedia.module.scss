@@ -1,13 +1,8 @@
 .wrapper {
-  width: min(1920px, 100vw);
+  width: min(1920px, 99vw);
   min-height: 1080px;
   position: relative;
-  background: radial-gradient(
-      75.83% 75.83% at 50% 50%,
-      rgba(59, 59, 65, 0.25) 0%,
-      rgba(37, 37, 41, 0) 100%
-    ),
-    #0e0e10;
+  background: #0e0e10;
   .tiktokBackgroundBlock {
     width: 308px;
     height: 308px;

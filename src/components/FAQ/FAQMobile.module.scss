@@ -1,12 +1,7 @@
 .wrapper {
   width: min(1920px, 100vw);
   height: auto;
-  background: radial-gradient(
-      75.83% 75.83% at 50% 50%,
-      rgba(59, 59, 65, 0.25) 0%,
-      rgba(37, 37, 41, 0) 100%
-    ),
-    #0e0e10;
+  background: #0e0e10;
   position: relative;
   .smallCross1 {
     width: 46px;
