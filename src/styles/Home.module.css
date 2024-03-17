@@ -15,6 +15,7 @@
   width: 100vw;
   height: auto;
   position:relative;
+  margin:0 auto;
 }
 .footer{
   max-width:1920px;

@@ -70,6 +70,6 @@ export const mediaButtonsArr = [
         color:'',
         textShadow:'0px 4px 35px #50ADFD',
         textBackground:'linear-gradient(90deg, #50ADFD 15.58%, #20527D 190.26%)',
-        link:'https://vk.com/legiondm_gta5',
+        link:'https://vk.com/gta5dmpro',
     }
 ]
