@@ -17,11 +17,11 @@ const Accordeon = ({
                 itemProp='mainEntity'
                 itemType='https://schema.org/Question'
                 className={styles.question}
+                onClick={() => setActive(prev => !prev)}
             >
                 <div className={cn(styles.titleInactive, isActive && styles.titleActive)}>{question}</div>
                 <div
                     className={cn(styles.buttonInactive, isActive && styles.buttonActive)}
-                    onClick={() => setActive(prev => !prev)}
                 >
                     <div className={cn(styles.stick1Inactive, isActive && styles.stick1Active)}></div>
                     <div className={cn(styles.stick2Inactive, isActive && styles.stick2Active)}></div>

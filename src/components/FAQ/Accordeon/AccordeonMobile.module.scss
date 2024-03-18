@@ -12,6 +12,9 @@ $duration: 0.5s;
     justify-content: flex-start;
     align-items: flex-start;
     gap:28px;
+    &:hover{
+      cursor:pointer;
+    }
     .titleInactive {
       color: #e4a520;
       font-family: Gilroy;

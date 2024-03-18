@@ -12,6 +12,9 @@ $duration: 0.5s;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    &:hover{
+      cursor:pointer;
+    }
     .titleInactive {
       color: #e4a520;
       font-family: Gilroy;
