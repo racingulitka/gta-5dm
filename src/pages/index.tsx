@@ -19,6 +19,8 @@ import NewsMobile from '@/components/mobile/NewsMobile/NewsMobile'
 import { handleNavigation } from '@/utils/handleNavigation'
 import FAQMobile from '@/components/FAQ/FAQMobile'
 import useIsMobile from '@/utils/useIsMobile'
+import toTheUpIcon from '@/pages/wiki/assets/toTheUpIcon.svg'
+import Image from 'next/image'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -27,9 +29,21 @@ export default function Home() {
 
   const mobileView = useIsMobile()
   const [showPaymentModal, setShowPaymentModal] = useState<boolean>(false)
+  const [isScrolled, setIsScrolled] = useState<number>(0)
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(document.documentElement.scrollTop)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => removeEventListener('scroll', handleScroll)
+  }, [])
 
   const onRequestClose = () => {
     setShowPaymentModal(false)
+  }
+
+  const onScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
@@ -58,6 +72,15 @@ export default function Home() {
           }
         </header>
         <main className={`${styles.main} ${inter.className}`}>
+        {
+            isScrolled > 1080 && !mobileView &&
+            <div className={styles.toTop} onClick={() => onScrollTop()}>
+              <div className={styles.square}>
+                <Image src={toTheUpIcon} alt='toTheUpIcon' className={styles.toTheUpIcon} />
+              </div>
+              <div className={styles.title}>Наверх</div>
+            </div>
+          }
           {
             mobileView ? <AdvantagesMobile /> : <Advantages />
           }

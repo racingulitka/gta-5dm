@@ -28,6 +28,42 @@
   background:#0E0E10;
 }
 
+.toTop {
+  position: fixed;
+  z-index:100;
+  right: 85px;
+  bottom: 200px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.toTop:hover {
+  cursor: pointer;
+}
+.square {
+  width: 62px;
+  aspect-ratio: 1/1;
+  background: #1a1a1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.toTheUpIcon {
+  width: 36px;
+  height: auto;
+}
+.title {
+  color: #fff;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 29px;
+}
+
 @font-face {
   font-family: 'Gilroy';
   src: url('../pages/fonts/Gilroy-Regular.ttf');
